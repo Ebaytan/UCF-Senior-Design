@@ -1,0 +1,27 @@
+h1, h2, h3, p {
+    text-align: center;
+}
+hr{
+    margin-top: 70px;
+    padding-bottom: 40px;
+}
+
+#mainimage {
+    margin-bottom: 80px;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+#footer {
+    margin-top: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+}
+
+#features {
+    margin-bottom: 50px;
+}
