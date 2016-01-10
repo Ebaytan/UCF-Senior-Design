@@ -11,6 +11,9 @@
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
-    "angular-strap": "~2.3.6"
+    "angular-strap": "~2.3.6",
+    "angular-animate": "~1.4.8",
+    "angular-motion": "~0.4.3",
+    "angular-auto-validate": "~1.19.3"
   }
 }
