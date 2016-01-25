@@ -2,491 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e801c9-ec47-4c19-ac97-e529043a7bf7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/angular.min.js.gzip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/tile-wide.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/tile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/tile-wide.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/tile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/bower" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/bower.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/http-server" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/http-server.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/karma" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/karma.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/protractor" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/protractor.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/shjs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/shjs.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/webdriver-manager" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/.bin/webdriver-manager.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/angular-animate.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-animate/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/changelog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/jcs-auto-validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/jcs-auto-validate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_af-af.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_de-de.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_en-GB.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_en-us.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_es-co.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_fr-fr.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_it-it.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_nl-nl.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_pl-pl.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_pt-br.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_pt-pt.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_ru-ru.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_tr-TR.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_zh-cn.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/dist/lang/jcs-auto-validate_zh-tw.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/gruntFile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/config/ngModelDecorator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/config/ngSubmitDecorator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/directives/autoValidateFormOptions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/directives/formReset.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/directives/registerCustomFormControl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/jcs-auto-validate-postfix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/jcs-auto-validate-prefix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/jcs-auto-validate-run.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/jcs-auto-validate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_af-af.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_de-de.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_en-GB.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_en-us.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_es-co.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_fr-fr.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_it-it.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_nl-nl.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_pl-pl.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_pt-br.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_pt-pt.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_ru-ru.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_tr-TR.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_zh-cn.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/lang/jcs-auto-validate_zh-tw.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/providers/validator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/services/bootstrap3ElementModifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/services/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/services/defaultErrorMessageResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/services/foundation5ElementModifier.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-auto-validate/src/services/validationManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/angular-loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/angular-loader.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/angular-loader.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-loader/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/angular-mocks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/ngAnimateMock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/ngMock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/ngMockE2E.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-mocks/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/angular-motion.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/angular-motion.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/angular-motion.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/collapse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/collapse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/collapse.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade-and-scale.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade-and-scale.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade-and-scale.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade-and-slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade-and-slide.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade-and-slide.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/fade.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/flip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/flip.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/flip.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/slide.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/dist/modules/slide.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/ngfactory.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/src/collapse/collapse.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/src/fade-and-scale/fade-and-scale.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/src/fade-and-slide/fade-and-slide.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/src/fade/fade.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/src/flip/flip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-motion/src/slide/slide.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/angular-route.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-route/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.codeclimate.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.eslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/angular-strap.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.compat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.compat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/angular-strap.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/affix.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/affix.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/alert.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/alert.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/alert.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/alert.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/aside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/aside.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/aside.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/aside.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/aside.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/button.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/button.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/collapse.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/collapse.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/compiler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/compiler.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/compiler.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/date-formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/date-formatter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/date-formatter.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/date-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/date-parser.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/date-parser.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/datepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/datepicker.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/datepicker.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/datepicker.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/debounce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/debounce.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dimensions.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dimensions.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dropdown.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dropdown.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dropdown.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/dropdown.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/modal.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/modal.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/modal.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/modal.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/navbar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/navbar.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/parse-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/parse-options.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/parse-options.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/popover.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/popover.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/popover.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/popover.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/raf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/raf.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/raf.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/scrollspy.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/scrollspy.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/select.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/select.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/select.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/select.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tab.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tab.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tab.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tab.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/timepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/timepicker.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/timepicker.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/timepicker.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tooltip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tooltip.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tooltip.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/tooltip.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/typeahead.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/typeahead.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/typeahead.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/dist/modules/typeahead.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/ngfactory.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/affix/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/alert/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/alert/alert.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/aside/aside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/aside/aside.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/button/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/collapse/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/datepicker/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/datepicker/datepicker.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/dropdown/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/dropdown/dropdown.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/compiler.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/date-formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/date-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/parse-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/helpers/raf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/modal/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/modal/modal.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/navbar/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/popover/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/popover/popover.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/scrollspy/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/select/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/select/select.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/tab/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/tab/tab.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/timepicker/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/timepicker/timepicker.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/tooltip/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/tooltip/tooltip.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/typeahead/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular-strap/src/typeahead/typeahead.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/angular-csp.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/angular.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/angular/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/bin/bower" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/abbreviations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/cache/clean.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/cache/list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/help.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/home.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/install.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/lookup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/prune.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/register.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/uninstall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/unregister.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/update.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/commands/version.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/Manager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/PackageRepository.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/Project.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/ResolveCache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolverFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/FsResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/GitFsResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/GitHubResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/GitRemoteResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/GitResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/Resolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/SvnResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/UrlResolver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/resolvers/pluginResolverFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/core/scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/renderers/JsonRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/renderers/StandardRenderer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/renderers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/analytics.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/cli.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/cmd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/copy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/createError.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/createLink.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/download.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/extract.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/fs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/readJson.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/removeIgnores.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/rimraf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/rootCheck.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/semver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/template.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/userAgent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/lib/util/validLink.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/helpers/colors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/helpers/condense.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/helpers/indent.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/helpers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/helpers/rpad.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/helpers/sum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-cache.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-cache/clean.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-cache/list.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-home.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-info.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-init.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-install.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-link.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-list.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-login.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-lookup.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-prune.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-register.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-search.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-uninstall.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-unregister.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-update.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help-version.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/json/help.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/conflict-resolved.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/conflict.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/help-cache.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/help-generic.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/help.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/info.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/lookup.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/register.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/bower/templates/std/search-results.std" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/browserconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/crossdomain.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/TOC.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/css.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/extend.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/faq.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/html.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/js.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/misc.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/doc/usage.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/humans.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/img/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/js/vendor/jquery-1.11.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/dist/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/browserconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/crossdomain.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/TOC.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/css.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/extend.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/faq.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/html.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/js.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/misc.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/doc/usage.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/humans.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/img/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/js/vendor/modernizr-2.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/src/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/test/file_content.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Web-Client/app/libs/html5-boilerplate/test/file_existence.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/.bowerrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/app/signup/signup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/app/signup/signup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/app/view1/view1_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/app/view2/view2_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/e2e-tests/protractor.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/e2e-tests/scenarios.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Web-Client/package.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Web-Client/app/view1/view1.html" afterPath="$PROJECT_DIR$/Web-Client/app/views/view1/view1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Web-Client/app/view1/view1.js" afterPath="$PROJECT_DIR$/Web-Client/app/views/view1/view1.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Web-Client/app/view2/view2.html" afterPath="$PROJECT_DIR$/Web-Client/app/views/view2/view2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Web-Client/app/view2/view2.js" afterPath="$PROJECT_DIR$/Web-Client/app/views/view2/view2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web-Client/app/index-async.html" afterPath="$PROJECT_DIR$/Web-Client/app/index-async.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web-Client/app/index.html" afterPath="$PROJECT_DIR$/Web-Client/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web-Client/app/views/signup/signup.js" afterPath="$PROJECT_DIR$/Web-Client/app/views/signup/signup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Web-Client/app/partials/nav-header.html" afterPath="$PROJECT_DIR$/Web-Client/app/partials/nav-header.html" />
     </list>
     <ignored path="UCF-Senior-Design.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -507,24 +26,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web-Client/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.580646">
-              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.29962546">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
               <folding>
-                <marker date="1453685857925" expanded="true" signature="1106:1259" placeholder="..." />
-                <marker date="1453685857925" expanded="true" signature="1199:1227" placeholder="..." />
+                <marker date="1453744363211" expanded="true" signature="1101:1254" placeholder="..." />
+                <marker date="1453744363211" expanded="true" signature="1194:1222" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.30861723">
+                <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Web-Client/app/views/signup/signup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02606635">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -555,7 +90,6 @@
         <option value="$PROJECT_DIR$/Web-Client/app/partials/footer.html" />
         <option value="$PROJECT_DIR$/server/roasttypes.json" />
         <option value="$PROJECT_DIR$/server/node-js-getting-started/index.js" />
-        <option value="$PROJECT_DIR$/Web-Client/app/partials/nav-header.html" />
         <option value="$PROJECT_DIR$/Web-Client/app/view2/view2.html" />
         <option value="$PROJECT_DIR$/Web-Client/app/signup/signup.html" />
         <option value="$PROJECT_DIR$/Web-Client/app/view1/view1.html" />
@@ -566,6 +100,8 @@
         <option value="$PROJECT_DIR$/Web-Client/app/views/view1/view1.js" />
         <option value="$PROJECT_DIR$/Web-Client/app/views/view2/view2.js" />
         <option value="$PROJECT_DIR$/Web-Client/app/views/signup/signup.js" />
+        <option value="$PROJECT_DIR$/Web-Client/app/partials/nav-header.html" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Web-Client/app/index.html" />
       </list>
     </option>
@@ -576,9 +112,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="976" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -623,86 +160,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web-Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web-Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web-Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="signup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UCF-Senior-Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web-Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -710,7 +167,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Web-Client/app/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Azure - SD Web Client/UCF-Senior-Design" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -734,9 +191,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="679" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="SearchEverywhereHistoryKey" value="_stream_pass&#9;FILE&#9;file://C:/Users/sammy/Documents/GitHub/UCF-Senior-Design/server/node_modules/mongodb/node_modules/readable-stream/lib/_stream_passthrough.js&#10;wg-meetings&#9;null&#9;null&#10;wg-meeting&#9;null&#9;null&#10;wg-meet&#9;null&#9;null&#10;once&#9;FILE&#9;file://C:/Users/sammy/Documents/GitHub/UCF-Senior-Design/Web-Client/app/libs/bower/node_modules/inquirer/node_modules/run-async/node_modules/once/once.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sammy\Documents\GitHub\Azure - SD Web Client\UCF-Senior-Design" />
       <recent name="C:\Users\sammy\Documents\GitHub\UCF-Senior-Design\server" />
       <recent name="C:\Users\sammy\Documents\GitHub\UCF-Senior-Design\Web-Client" />
     </key>
@@ -832,17 +291,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30530974" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15862808" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32581738" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2852311" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2850627" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -850,7 +310,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -894,19 +353,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web-Client/app/partials/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7096774">
@@ -1023,13 +469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36666667">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web-Client/app/partials/nav-header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.806452">
-          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -1248,22 +687,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Web-Client/app/index.html">
+    <entry file="file://$PROJECT_DIR$/Web-Client/app/partials/nav-header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.580646">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.34554973">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web-Client/app/libs/bower/node_modules/inquirer/node_modules/run-async/node_modules/once/once.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19298245">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/node_modules/mongodb/node_modules/readable-stream/lib/_stream_passthrough.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1453685857925" expanded="true" signature="1106:1259" placeholder="..." />
-            <marker date="1453685857925" expanded="true" signature="1199:1227" placeholder="..." />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Web-Client/app/views/signup/signup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02606635">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.30861723">
+            <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web-Client/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29962546">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <marker date="1453744363211" expanded="true" signature="1101:1254" placeholder="..." />
+            <marker date="1453744363211" expanded="true" signature="1194:1222" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
