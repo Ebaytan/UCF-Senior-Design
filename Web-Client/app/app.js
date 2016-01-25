@@ -18,15 +18,5 @@ angular.module('myApp', [
         $routeProvider.otherwise({redirectTo: '/'});
     }])
     .controller('general', function ($scope) {
-        $scope.showmainimage = true;
-
-        $scope.hideMainimage = function(){
-            $scope.showMainimage = false;
-            console.log('hide main image');
-        }
-        $scope.showMainimage = function(){
-            $scope.showmainimage = true;
-            console.log('show main image');
-        }
 
     });
