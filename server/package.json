@@ -8,7 +8,17 @@
   },
   "dependencies": {
     "ejs": "2.3.3",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "mongodb":"*",
+    "mongoose":"*",
+    "connect-flash":"*",
+    "express-validator":"*",
+    "express-session":"*",
+    "express-messages":"*",
+    "passport":"*",
+    "passport-local":"*",
+    "passport-http":"*",
+    "body-parser":"*"
   },
   "engines": {
     "node": "0.12.7"

@@ -2,5 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="PROJECT" libraries="{angular, angular-animate, angular-sanitize, angular-strap, angular-strap.docs.tpl, angular-strap.tpl}" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

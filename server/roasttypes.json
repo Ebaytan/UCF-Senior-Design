@@ -1,8 +1,0 @@
-{
-  "Rtype": {
-    "light": ["Light City","Half City","Cinnamon"],
-    "medium": ["City", "American", "Breakfast"],
-    "medium dark": ["Full City"],
-    "dark": ["High", "Continental", "New Orleans", "European", "Espresso", "Viennese", "Italian", "French"]
-  }
-}
