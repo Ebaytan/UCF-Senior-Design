@@ -21,11 +21,17 @@
           rel="stylesheet">
     <link href="libs/angular-motion/dist/angular-motion.min.css"
           rel="stylesheet">
+    <link href="libs/angular-chart.js/dist/angular-chart.min.css"
+          rel="stylesheet">
+
+
 </head>
 <body>
 
 <!-- Nav header partial -->
 <ng-include src="'./partials/nav-header.html'"></ng-include>
+<ng-include src="'./partials/roastController.html'"></ng-include>
+
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -37,9 +43,6 @@
 <!-- Footer partial -->
 <ng-include src="'./partials/footer.html'"></ng-include>
 
-<!-- In production use:
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="public/js/bootstrap.min.js"></script>
 <script src="libs/angular/angular.js"></script>
@@ -49,17 +52,24 @@
 <script src="libs/angular-strap/dist/angular-strap.min.js"></script>
 <script src="libs/angular-strap/dist/angular-strap.tpl.min.js"></script>
 <script src="libs/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
+<script src="libs/Chart.js/Chart.js"></script>
+<script src="libs/angular-chart.js/dist/angular-chart.min.js"></script>
 
+<script src="libs/jQuery-Knob-master/dist/jquery.knob.min.js"></script>
+
+<script src="public/js/main.js"></script>
 <script src="app.js"></script>
 <!-- Page Views -->
 <script src="views/home/home.js"></script>
 <script src="views/aboutus/aboutus.js"></script>
 <script src="views/Login/login.js"></script>
 <script src="views/signup/signup.js"></script>
+<script src="views/browse/browse.js"></script>
+<script src="views/browse/browselist/browselist.js"></script>
+<script src="views/browse/roastprofile/roastprofile.js"></script>
 
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
-
 </body>
 </html>
