@@ -17,11 +17,11 @@
           rel="stylesheet">
     <link href="public/stylesheets/style.css"
           rel="stylesheet">
-    <link href="libs/font-awesome-4.5.0/css/font-awesome.min.css"
+    <link href="public/libs/font-awesome-4.5.0/css/font-awesome.min.css"
           rel="stylesheet">
-    <link href="libs/angular-motion/dist/angular-motion.min.css"
+    <link href="public/libs/angular-motion/dist/angular-motion.min.css"
           rel="stylesheet">
-    <link href="libs/angular-chart.js/dist/angular-chart.min.css"
+    <link href="public/libs/angular-chart.js/dist/angular-chart.min.css"
           rel="stylesheet">
 
 
@@ -30,7 +30,7 @@
 
 <!-- Nav header partial -->
 <ng-include src="'./partials/nav-header.html'"></ng-include>
-<ng-include src="'./partials/roastController.html'"></ng-include>
+<ng-include src="'./shared/roastcontrol/roastcontrolView.html'"></ng-include>
 
 
 <!--[if lt IE 7]>
@@ -45,28 +45,31 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="public/js/bootstrap.min.js"></script>
-<script src="libs/angular/angular.js"></script>
-<script src="libs/angular-route/angular-route.js"></script>
-<script src="libs/angular-animate/angular-animate.min.js"></script>
+<script src="public/libs/angular/angular.js"></script>
+<script src="public/libs/angular-route/angular-route.js"></script>
+<script src="public/libs/angular-animate/angular-animate.min.js"></script>
 <script src="//cdn.jsdelivr.net/angularjs/1.4.5/angular-sanitize.min.js" data-semver="1.4.5"></script>
-<script src="libs/angular-strap/dist/angular-strap.min.js"></script>
-<script src="libs/angular-strap/dist/angular-strap.tpl.min.js"></script>
-<script src="libs/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
-<script src="libs/Chart.js/Chart.js"></script>
-<script src="libs/angular-chart.js/dist/angular-chart.min.js"></script>
+<script src="public/libs/angular-strap/dist/angular-strap.min.js"></script>
+<script src="public/libs/angular-strap/dist/angular-strap.tpl.min.js"></script>
+<script src="public/libs/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
+<script src="public/libs/Chart.js/Chart.js"></script>
+<script src="public/libs/angular-chart.js/dist/angular-chart.min.js"></script>
 
-<script src="libs/jQuery-Knob-master/dist/jquery.knob.min.js"></script>
+<script src="public/libs/jQuery-Knob-master/dist/jquery.knob.min.js"></script>
 
 <script src="public/js/main.js"></script>
 <script src="app.js"></script>
 <!-- Page Views -->
 <script src="views/home/home.js"></script>
 <script src="views/aboutus/aboutus.js"></script>
-<script src="views/Login/login.js"></script>
 <script src="views/signup/signup.js"></script>
 <script src="views/browse/browse.js"></script>
 <script src="views/browse/browselist/browselist.js"></script>
 <script src="views/browse/roastprofile/roastprofile.js"></script>
+<script src="shared/roastcontrol/roastcontrolController.js"></script>
+<script src="shared/login/loginController.js"></script>
+<script src="shared/login/loginService.js"></script>
+<script src="shared/login/constants.js"></script>
 
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
