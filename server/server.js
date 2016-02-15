@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var passport = require('passport');
+var cors = require('cors');
 var port = process.env.PORT || 9000;
 
 //routes included
@@ -24,6 +25,9 @@ app.get('/', function (req, res) {
 });
 
 app.use('/api/user', users);
+
+//CORS
+app.use(cors());
 
 // Start the server
 app.listen(port);

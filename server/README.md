@@ -1,5 +1,5 @@
-*Routes
-**/api/users
+#Routes
+/api/users
 /signup
 headers required: name, email, password, roaster unique id
 /authenticate

@@ -32,6 +32,7 @@ router.post('/signup', function (req, res) {
         });
         newUser.save(function (err) {
             if (err) {
+                console.log(err);
                 res.json({success: false, msg: 'Username already exists.'});
             } else {
                 res.json({success: true, msg: 'Successful created user!'});
@@ -52,6 +53,7 @@ router.post('/authenticate', function (req, res) {
             user.comparePassword(req.body.password, function (err, isMatch) {
                 if (isMatch && !err) {
                     var token = jwt.encode(user, config.secret);
+                    //send username
                     res.json({success: true, token: 'JWT ' + token});
                 } else {
                     res.send({success: false, msg: 'Authentication failed. Wrong password.'});
