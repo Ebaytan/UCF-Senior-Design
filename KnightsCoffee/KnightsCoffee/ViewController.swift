@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         menuButton.target = self.revealViewController()
         menuButton.action = Selector("revealToggle:")
         
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
         //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 

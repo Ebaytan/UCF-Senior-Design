@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AA6ECF81C7E423600DDDCA0 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6ECF71C7E423600DDDCA0 /* BackTableVC.swift */; };
 		5AB890641C7D1A96005B1325 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB890631C7D1A96005B1325 /* Main.storyboard */; };
 		5AC766A41C7D0E7F00823520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC766A31C7D0E7F00823520 /* AppDelegate.swift */; };
 		5AC766A61C7D0E7F00823520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC766A51C7D0E7F00823520 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5AA6ECF71C7E423600DDDCA0 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 		5AB890631C7D1A96005B1325 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5AC766A01C7D0E7F00823520 /* KnightsCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnightsCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC766A31C7D0E7F00823520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				5AC766B51C7D0E9B00823520 /* Menu Button */,
 				5AC766A31C7D0E7F00823520 /* AppDelegate.swift */,
+				5AA6ECF71C7E423600DDDCA0 /* BackTableVC.swift */,
 				5AB890631C7D1A96005B1325 /* Main.storyboard */,
 				5AC766A51C7D0E7F00823520 /* ViewController.swift */,
 				5AC766AA1C7D0E7F00823520 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 			files = (
 				5AC766A61C7D0E7F00823520 /* ViewController.swift in Sources */,
 				5AC766A41C7D0E7F00823520 /* AppDelegate.swift in Sources */,
+				5AA6ECF81C7E423600DDDCA0 /* BackTableVC.swift in Sources */,
 				5AC766B91C7D0EAF00823520 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
