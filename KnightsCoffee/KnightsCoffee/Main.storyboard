@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GAV-R7-S6f">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="HFS-qX-zgZ">
+            <objects>
+                <viewController id="GAV-R7-S6f" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQf-P9-T4x"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z4r-Zx-12v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uNI-so-kmq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Pji-Xj-OKM" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Fe3-uu-Jgz"/>
+                        <segue destination="SAm-R1-rTx" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Xtm-5W-5c6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnT-V7-mzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="-15"/>
+        </scene>
+        <!--Back TableVC-->
+        <scene sceneID="2o0-cJ-837">
+            <objects>
+                <tableViewController id="Pji-Xj-OKM" customClass="BackTableVC" customModule="KnightsCoffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PWd-8b-tEl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Hello" id="cyP-SY-ILs">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cyP-SY-ILs" id="k1o-UR-7Ld">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Second" id="qUI-iy-gdm">
+                                <rect key="frame" x="0.0" y="66" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qUI-iy-gdm" id="dHj-kx-mU7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="World" id="dK9-90-k3Q">
+                                <rect key="frame" x="0.0" y="110" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dK9-90-k3Q" id="bwS-uz-iH5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Pji-Xj-OKM" id="C3e-mZ-6hN"/>
+                            <outlet property="delegate" destination="Pji-Xj-OKM" id="nxn-8j-6ah"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDi-Ti-6HK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="768"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rsi-to-ON1">
+            <objects>
+                <navigationController id="SAm-R1-rTx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zqG-2Q-dap">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ixY-f8-A6o" kind="relationship" relationship="rootViewController" id="hnJ-MS-HTX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYJ-D2-CyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82" y="768"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uN1-xT-ZwG">
+            <objects>
+                <viewController id="ixY-f8-A6o" customClass="ViewController" customModule="KnightsCoffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iJt-0t-dBV"/>
+                        <viewControllerLayoutGuide type="bottom" id="DxK-mw-XZR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZaW-MG-3IG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3z0-CS-o48">
+                                <rect key="frame" x="0.0" y="108" width="600" height="536"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Light Roast" translatesAutoresizingMaskIntoConstraints="NO" id="0uR-A7-HF8">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Medium Roast" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-lz-xhg">
+                                        <rect key="frame" x="0.0" y="179" width="600" height="179"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dark Roast" translatesAutoresizingMaskIntoConstraints="NO" id="PYp-Ha-eZ2">
+                                        <rect key="frame" x="0.0" y="358" width="600" height="179"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Air-Ov-677">
+                                <rect key="frame" x="0.0" y="108" width="600" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8m-Fk-V9R">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="Light Roast">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vda-7c-ELg">
+                                        <rect key="frame" x="0.0" y="179" width="600" height="179"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="Medium Roast">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sq-at-5kf">
+                                        <rect key="frame" x="0.0" y="358" width="600" height="179"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                        <state key="normal" title="Dark Roast">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3z0-CS-o48" secondAttribute="bottom" id="3t8-YH-dH5"/>
+                            <constraint firstItem="Air-Ov-677" firstAttribute="leading" secondItem="ZaW-MG-3IG" secondAttribute="leading" id="Dg1-E5-yiT"/>
+                            <constraint firstItem="DxK-mw-XZR" firstAttribute="top" secondItem="Air-Ov-677" secondAttribute="bottom" id="H38-dF-Baq"/>
+                            <constraint firstItem="3z0-CS-o48" firstAttribute="top" secondItem="iJt-0t-dBV" secondAttribute="bottom" id="Mr3-eU-gP3"/>
+                            <constraint firstItem="Air-Ov-677" firstAttribute="top" secondItem="iJt-0t-dBV" secondAttribute="bottom" id="NKs-QW-H3a"/>
+                            <constraint firstItem="Air-Ov-677" firstAttribute="width" secondItem="ZaW-MG-3IG" secondAttribute="width" id="SDN-p2-rnJ"/>
+                            <constraint firstItem="3z0-CS-o48" firstAttribute="top" secondItem="iJt-0t-dBV" secondAttribute="bottom" id="UB0-fo-FLk"/>
+                            <constraint firstItem="DxK-mw-XZR" firstAttribute="top" secondItem="3z0-CS-o48" secondAttribute="bottom" id="UKm-SX-jIH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3z0-CS-o48" secondAttribute="trailing" multiplier="0.9" id="Xoq-Vu-ILl"/>
+                            <constraint firstItem="3z0-CS-o48" firstAttribute="centerX" secondItem="ZaW-MG-3IG" secondAttribute="centerX" id="bWj-bD-viz"/>
+                            <constraint firstItem="3z0-CS-o48" firstAttribute="leading" secondItem="ZaW-MG-3IG" secondAttribute="leading" id="qf9-vG-kKk"/>
+                            <constraint firstItem="3z0-CS-o48" firstAttribute="leading" secondItem="ZaW-MG-3IG" secondAttribute="leadingMargin" id="t1T-7G-16h"/>
+                            <constraint firstAttribute="trailing" secondItem="3z0-CS-o48" secondAttribute="trailing" id="v2E-qJ-bCL"/>
+                            <constraint firstItem="3z0-CS-o48" firstAttribute="width" secondItem="ZaW-MG-3IG" secondAttribute="width" id="wId-sS-rHd"/>
+                            <constraint firstAttribute="trailing" secondItem="Air-Ov-677" secondAttribute="trailing" id="wtN-1U-XVY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f2u-zO-XZy">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="YBp-0c-iAW">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="YBp-0c-iAW" id="Jd6-bf-clu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmQ-gZ-ulE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="1563"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dark Roast" width="1247" height="939"/>
+        <image name="Light Roast" width="735" height="599"/>
+        <image name="Medium Roast" width="600" height="400"/>
+        <image name="menu" width="28" height="20"/>
+    </resources>
+</document>
