@@ -9,7 +9,7 @@ angular.module('myApp.browse', [
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/browse', {
-            templateUrl: './views/browse/browse.html',
+            templateUrl: './views/browse/browse.html'
         });
         $routeProvider.when('/browse/lightroasts', {
             templateUrl: './views/browse/browselist/browselist.html'

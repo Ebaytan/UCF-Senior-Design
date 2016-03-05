@@ -1,8 +1,11 @@
-angular.module('myApp.missioncontrol', [])
+'use strict';
+
+angular.module('myApp.missioncontrol', [
+        'myApp.missioncontrol.roasting'
+    ])
 
     .controller('missionCtrl', function ($scope) {
         //determines current view of mission control
-        //TODO: change back to "Initial"
         $scope.currentState = "Initial";
         $scope.listType = "";   //Favorite, Recent, or Popular
 

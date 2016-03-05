@@ -15,6 +15,11 @@ angular.module('myApp.login', [])
                 console.log(errMsg);
             });
         };
+
+        $scope.logout = function () {
+            console.log("logout function called.");
+            AuthService.logout();
+        };
     })
 
     .controller('InsideCtrl', function ($scope, AuthService, API_ENDPOINT, $http, $state) {
@@ -28,9 +33,6 @@ angular.module('myApp.login', [])
             });
         };
 
-        $scope.logout = function () {
-            AuthService.logout();
-        };
     })
 
     .controller('AppCtrl', function ($scope, $state, $ionicPopup, AuthService, AUTH_EVENTS) {

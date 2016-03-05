@@ -40,6 +40,7 @@ angular.module('myApp.login')
         function destroyUserCredentials() {
             authToken = undefined;
             isAuthenticated = false;
+            $rootScope.Authenticated = false;
             $http.defaults.headers.common.Authorization = undefined;
             window.localStorage.removeItem(LOCAL_TOKEN_KEY);
             window.localStorage.removeItem(LOCAL_USERNAME);
