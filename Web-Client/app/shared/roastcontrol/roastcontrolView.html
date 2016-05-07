@@ -1,0 +1,125 @@
+<!--
+    Grey background
+    - if no roasts in progress
+        - Favorites list
+    - Roast in progress
+        - eta on roast
+        - start, stop and pause buttons
+        - temp up or down knobs
+        - air flow up or down knobs
+
+ -->
+<div class="container-fluid" id="missionControl" ng-controller="missionCtrl">
+
+    <ng-include src="'./shared/roastcontrol/initial/initialView.html'"></ng-include>
+    <ng-include src="'./shared/roastcontrol/roasting/roastingView.html'"></ng-include>
+
+
+    <!-- Initial view when no roast is running -->
+    <!--<div class="container" ng-show="currentState == 'Initial'">-->
+        <!--<h1 class="clearfix" style="margin-bottom: 30px;text-align:center;">-->
+            <!--Mission Control <span class="fa fa-space-shuttle"></span>-->
+        <!--</h1>-->
+
+        <!--<div class="col-md-4 col-sm-4 clearfix">-->
+            <!--<a href="" style="text-decoration: none;">-->
+                <!--<section class="banner banner_controls controlOptions">-->
+                    <!--<div class="inner">-->
+                        <!--<h2>Favorite Roasts</h2>-->
+                    <!--</div>-->
+                <!--</section>-->
+            <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="col-md-4 col-sm-4 clearfix">-->
+            <!--<a href="" style="text-decoration: none;">-->
+                <!--<section class="banner banner_controls controlOptions">-->
+                    <!--<div class="inner">-->
+                        <!--<h2>Recent Roasts</h2>-->
+                    <!--</div>-->
+                <!--</section>-->
+            <!--</a>-->
+        <!--</div>-->
+
+        <!--<div class="col-md-4 col-sm-4 clearfix">-->
+            <!--<a href="" style="text-decoration: none;">-->
+                <!--<section class="banner banner_controls controlOptions">-->
+                    <!--<div class="inner">-->
+                        <!--<h2>Popular Roasts</h2>-->
+                    <!--</div>-->
+                <!--</section>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="col-md-12 col-sm-12">-->
+            <!--<div class="btn btn-lg btn-success center-block"-->
+                 <!--ng-click="setnextState('Roasting')">Quick Start-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!-- Roast is running -->
+    <!--<div class="row" ng-show="currentState == 'Roasting'">-->
+        <!--&lt;!&ndash; Roast info header &ndash;&gt;-->
+        <!--<div class="row" style="background-color: silver; height: 150px;width:100%;"-->
+             <!--ng-show="currentState == 'Roasting'">-->
+            <!--<h2>Roast Name</h2>-->
+            <!--&lt;!&ndash; Bean type will link to amazon in order to allow customer to buy ced beans. &ndash;&gt;-->
+            <!--<h4>Roast Type | <a href="#/" style="text-decoration: none;">Bean Type</a></h4>-->
+        <!--</div>-->
+        <!--<div class="container">-->
+            <!--<div class="row center-block" style="height:200px;text-align: center;">-->
+                <!--<div class="col-md-6" style="margin: auto;">-->
+                    <!--<h2 style="text-align: center;">Current Air Percentage</h2>-->
+                    <!--<h1 style="text-align: center;">42%</h1>-->
+                <!--</div>-->
+                <!--<div class="col-md-6" style="margin: auto;">-->
+                    <!--<h2 style="text-align: center;">Current Temperature</h2>-->
+                    <!--<h1 style="text-align: center;">150&deg; Fahrenheit</h1>-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <!--<div class="row center-block" style="text-align: center;">-->
+                <!--<div class="col-sm-4" style="margin: auto;">-->
+                    <!--&lt;!&ndash; TODO: value should be acquired from the db &ndash;&gt;-->
+                    <!--<input type="text" value="0" id="aircontrol" data-cursor="true">-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; two buttons &ndash;&gt;-->
+                <!--<div class="col-sm-4" style="margin: auto">-->
+                    <!--<div class="btn btn-lg btn-danger center-block"-->
+                         <!--ng-click="toggleRoast()"-->
+                         <!--style="padding: auto;"-->
+                         <!--ng-show="roasting">-->
+                        <!--<span>Stop</span>-->
+
+                    <!--</div>-->
+
+                    <!--<div class="btn btn-lg btn-success center-block"-->
+                         <!--ng-click="toggleRoast()"-->
+                         <!--style="padding: auto;"-->
+                         <!--ng-show="!roasting">-->
+                        <!--<span>Resume</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; style="padding:20px 90px;" &ndash;&gt;-->
+                <!--<div class="col-sm-4" style="margin: auto;">-->
+                    <!--&lt;!&ndash; TODO: value should be acquired from the db &ndash;&gt;-->
+                    <!--<input type="text" value="0" id="tempcontrol" data-cursor="true" data-min="100" data-max="1000"-->
+                           <!--data-step="1">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+</div>
+
+<!-- when updating value of knobs use their id along with jquery (AJAX) to update value in server -->
+<script>
+    $(function () {
+        $("#aircontrol").knob();
+    });
+    $(function () {
+        $("#tempcontrol").knob();
+    });
+
+</script>

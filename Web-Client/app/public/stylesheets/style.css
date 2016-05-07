@@ -1,0 +1,291 @@
+hr {
+    margin-top: 70px;
+    padding-bottom: 40px;
+}
+
+#mainimage {
+    margin-bottom: 80px;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+#footer {
+    margin-top: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    height: 500px;
+}
+
+#features {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+#signup {
+    border: 1px solid #ddd;
+    border-radius: 3px 3px 3px 3px;
+    padding: 14px 26px 26px;
+    box-shadow: 4px 4px 1px #c4c4c4;
+    margin-top: 50px;
+}
+
+.UserInfo {
+    margin-bottom: 20px;
+}
+
+.results {
+    height: 30px;
+    text-align: left;
+    padding: 20px;
+}
+
+.details {
+    margin-bottom: 40px;
+}
+
+/* Banner */
+.banner {
+    background-color: #666666;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #d8d8d8;
+    padding: 14em 0;
+    text-align: center;
+    position: relative;
+    opacity: 1.2;
+    margin-top: -18px;
+}
+/*
+    Mission control
+*/
+.banner_controls {
+    height: 100px;
+}
+
+#banner_home {
+    background-image: url("../images/coffeebeanwall.png");
+}
+
+#banner_light {
+    /*background-image: url(../images/lightroastedbeans.jpg);*/
+}
+
+#banner_medium {
+    /*background-image: url(../images/mediumRoastedBeansOp1.jpg);*/
+}
+
+#banner_dark {
+    /*background-image: url(../images/darkRoastedBeansOp1.jpg);*/
+}
+#banner_featured {
+
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(64, 72, 80, 0.25);
+}
+
+.banner .inner {
+    position: relative;
+    z-index: 1;
+}
+
+.banner .inner :last-child {
+    margin-bottom: 0;
+}
+
+.banner h2, .banner h3, .banner h4, .banner h5, .banner h6 {
+    color: #ffffff;
+}
+
+.banner h2 {
+    font-size: 3.5em;
+    line-height: 1em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    text-decoration: none;
+}
+
+.banner p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul.actions {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.actions li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+    vertical-align: middle;
+}
+
+ul.actions li:last-child {
+    padding-right: 0;
+}
+
+ul.actions.small li {
+    padding: 0 0.5em 0 0;
+}
+
+ul.actions.vertical li {
+    display: block;
+    padding: 1em 0 0 0;
+}
+
+ul.actions.vertical li:first-child {
+    padding-top: 0;
+}
+
+ul.actions.vertical li > * {
+    margin-bottom: 0;
+}
+
+ul.actions.vertical.small li {
+    padding: 0.5em 0 0 0;
+}
+
+ul.actions.vertical.small li:first-child {
+    padding-top: 0;
+}
+
+ul.actions.fit {
+    display: table;
+    margin-left: -1em;
+    padding: 0;
+    table-layout: fixed;
+    width: calc(100% + 1em);
+}
+
+ul.actions.fit li {
+    display: table-cell;
+    padding: 0 0 0 1em;
+}
+
+ul.actions.fit li > * {
+    margin-bottom: 0;
+}
+
+ul.actions.fit.small {
+    margin-left: -0.5em;
+    width: calc(100% + 0.5em);
+}
+
+ul.actions.fit.small li {
+    padding: 0 0 0 0.5em;
+}
+
+section {
+    margin-top: -20px;
+}
+
+.feature {
+    margin-bottom: 50px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+/*.carousel {*/
+    /*height: 500px;*/
+    /*margin-bottom: 60px;*/
+/*}*/
+/*!* Since positioning the image, we need to help out the caption *!*/
+/*.carousel-caption {*/
+    /*z-index: 10;*/
+/*}*/
+
+/*!* Declare heights because of positioning of img element *!*/
+/*.carousel .item {*/
+    /*height: 500px;*/
+    /*background-color: #777;*/
+/*}*/
+/*.carousel-inner > .item > img {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*min-width: 100%;*/
+    /*height: 500px;*/
+/*}*/
+
+/*
+    Roaster drop down control
+*/
+#missionControl {
+    height: 650px;
+    margin-top:-40px;
+    display: none;
+    color: slategrey;
+    padding: 20px 100px;
+    overflow: hidden;
+}
+
+#controlOptions {
+    /*height: 100px;*/
+    height:auto;
+}
+
+.control {
+    margin-bottom: 20px;
+}
+
+.btn {
+    width:200px;
+    margin-top:20px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+
+

@@ -1,0 +1,1 @@
+Will be the components that will be reused around web app but also require some angular code
