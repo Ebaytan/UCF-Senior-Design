@@ -5,12 +5,6 @@ var passport = require('passport');
 var config = require('../../config/database'); // get db config file
 var Roast = require('../models/roastModel'); // get the mongoose model
 var User = require('../models/user');
-
-// try {
-//     //mongoose.connect(config.database);
-// } catch (e) {
-//     console.log(e);
-// }
 require('../../config/passport')(passport);
 var jwt = require('jwt-simple');
 
@@ -82,7 +76,9 @@ router.post('/', function (req, res) {
  * Returns a list of all roasting profiles in the database
  */
 router.get('/', function (req, res) {
+
     Roast.find({}, function (err, roasts) {
+
         if (err) {
             console.log(err);
             res.json({success: false, error: err});
@@ -90,6 +86,7 @@ router.get('/', function (req, res) {
 
         res.json({success: true, roasts: roasts});
     });
+
 });
 
 /**
@@ -102,6 +99,7 @@ router.get('/', function (req, res) {
 router.get('/:name', function (req, res) {
 
     Roast.find({name: req.params.name}, function (err, roast) {
+
         if (err) {
             console.log(err);
             res.json({success: false, error: err});
@@ -111,6 +109,62 @@ router.get('/:name', function (req, res) {
 
     });
 
+});
+
+router.post('/:name/rateup', function (req, res) {
+
+    Roast.update(
+        {
+            name: req.params.name
+        },
+        {
+            $inc: {
+                rating: 1  //increment rating by 1
+            }
+        },
+        {
+            upsert: true
+        },
+        function (err) {
+            if (err) {
+                console.log(err);
+                console.log(req.params.name);
+                res.json({success: false, error: err});
+            }
+            else {
+                console.log(req.params.name);
+                res.json({success: true, msg: 'Roast profile successfully rated up!'})
+            }
+        }
+    );
+
+});
+
+router.post('/:name/ratedown', function (req, res) {
+    Roast.update(
+        {
+            name: req.params.name
+        },
+        {
+            $inc: {
+                rating: -1  //decrement rating by 1
+            }
+        },
+        {
+            upsert: true
+        },
+        function (err) {
+            if (err) {
+                console.log(err);
+                console.log(req.params.name);
+                res.json({success: false, error: err});
+            }
+            else {
+                console.log(req.params.name);
+                res.json({success: true, msg: 'Roast profile successfully rated down!'})
+            }
+        }
+    );
 });
 
 module.exports = router;

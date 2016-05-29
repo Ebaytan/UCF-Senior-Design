@@ -32,7 +32,7 @@ var UserSchema = new Schema({
             type: String,
             required: true
         },
-        roasting: Boolean,   //Roasting or Not
+        roastingStatus: Boolean,   //Roasting or Not
         roastStartTime: String,
         roastProfileID: String
     },
