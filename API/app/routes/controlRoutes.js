@@ -8,6 +8,23 @@ var User = require('../models/user');
 require('../../config/passport')(passport);
 var jwt = require('jwt-simple');
 
+//root uri /api/control
+
+
+/**
+ * From iOS
+ */
+
+ //router.post('/client/:mode');
+
+
+
+
+
+
+
+
+
 /**
  * Roasts with base URI of /api/roast/
  */
@@ -166,26 +183,5 @@ router.post('/:name/ratedown', function (req, res) {
         }
     );
 });
-
-
-/**
- * Query by type of Roast
- */
-router.get('/type/:type', function (req, res) {
-    Roast.find(
-        {
-            roastType: req.params.type
-        },
-        function (err, roasts) {
-            if(err) {
-                console.log(err);
-                res.json({success: false, msg: err});
-            }
-
-            res.json({success: true, roasts: roasts});
-        }
-    );
-});
-
 
 module.exports = router;
