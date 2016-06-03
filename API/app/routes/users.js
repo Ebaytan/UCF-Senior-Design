@@ -44,7 +44,7 @@ router.post('/authenticate', function (req, res) {
     //find user with passed username
     User.findOne({
         username: req.body.username
-    //once found
+        //once found
     }, function (err, user) {
         //throw error if one occured
         if (err) throw err;
@@ -68,39 +68,6 @@ router.post('/authenticate', function (req, res) {
             });
         }
     });
-});
-
-router.get('/memberinfo', passport.authenticate('jwt', {session: false}), function (req, res) {
-    //grab authentication token sent from the client that was attached to header
-    var token = getToken(req.headers);
-
-    //does the token exist?
-    if (token) {
-        //make use of our secret which is simply our key to encrypt and decrypt token
-        //then store that value in variable decoded
-        var decoded = jwt.decode(token, config.secret);
-        //run a query on the database looking for user
-        User.findOne({
-            username: decoded.username
-        //once complete
-        }, function (err, user) {
-            //did we run into a problem? if so throw an error
-            if (err) throw err;
-            //user does not exist?
-            if (!user) {
-                //error response to user
-                return res.status(403).send({success: false, msg: 'Authentication failed. User not found.'});
-            //we were successful in finding the user
-            } else {
-                //success response to user
-                return res.json({success: true, msg: 'Welcome in the member area ' + user.username + '!'});
-            }
-        });
-    //no token was found on the header of the request
-    } else {
-        //error response
-        return res.status(403).send({success: false, msg: 'No token provided.'});
-    }
 });
 
 getToken = function (headers) {

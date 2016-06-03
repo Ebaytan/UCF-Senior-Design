@@ -7,7 +7,8 @@ var bcrypt = require('bcrypt');
 var UserSchema = new Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
 
     },
     password: {
@@ -32,7 +33,7 @@ var UserSchema = new Schema({
             type: String,
             required: true
         },
-        roastingStatus: Boolean,   //Roasting or Not
+        roastingStatus: String,   //Roasting or Not
         roastStartTime: String,
         roastProfileID: String
     },

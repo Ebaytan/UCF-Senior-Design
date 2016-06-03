@@ -31,6 +31,7 @@ app.use(function (req, res, next) {
 //routes included
 var users = require('./app/routes/users');
 var roasts = require('./app/routes/roastRoutes');
+var controls = require('./app/routes/controlRoutes');
 
 // get our request parameters
 app.use(bodyParser.urlencoded({extended: false}));
@@ -59,6 +60,7 @@ app.use(expressWinston.logger({
 
 app.use('/api/user', users);
 app.use('/api/roast', roasts);
+app.use('/api/control', controls);
 
 // Start the API
 app.listen(port);

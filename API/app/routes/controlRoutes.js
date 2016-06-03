@@ -14,174 +14,142 @@ var jwt = require('jwt-simple');
 /**
  * From iOS
  */
-
- //router.post('/client/:mode');
-
-
-
-
-
-
-
-
-
 /**
- * Roasts with base URI of /api/roast/
+ * Will update the roaster object within the user object.
+ *  @params
+ *      :mode
+ *          Valid options: start, pause, stop
+ *      time=
+ *          When the roasting started hh:mm:ss
+*       roastname=
+ *          The name of the roast that is currently loaded on the roaster
+ *
+ *  @return
+ *
  */
-router.post('/', function (req, res) {
+router.post('/client/:mode', function (req, res) {
+
     //grab authentication token sent from the client that was attached to header
     var token = getToken(req.headers);
 
-    //does the token exist?
     if (token) {
-        //make use of our secret which is simply our key to encrypt and decrypt token
-        //then store that value in variable decoded
+
         var decoded = jwt.decode(token, config.secret);
+        var mode = req.params.mode;
+        var roast = req.query.roastName;
+        var time = req.query.time;
 
-        //ensure that data necessary to create roast profile has been provided
-        if (!req.body.name || !req.body.roastType || !req.body.beanType || !req.body.RoastingData) {
-            res.json({success: false, msg: 'Please fill all necessary fields.'});
+        console.log(mode);
+
+        //check if required parameters have been passed
+        if(roast == null || mode == null){
+            res.json({success: false, msg: "Make sure that you have passed both the mode you would like to set the roaster to along with the roast name that will run!"});
+            return;
         }
-        else {
-            var newRoast = new Roast({
-                name: req.body.name,
-                roastType: req.body.roastType,
-                beanType: req.body.beanType,
-                creatorID: decoded.username,  //value comes from token
-                RoastingData: req.body.RoastingData,
-                rating: 0   //initially 0
-            });
 
-            newRoast.save(function (err) {
+        //is the mode valid?
+        if (mode != "start" && mode != "pause" && mode != "stop") {
+            res.json({success: false, msg: "The mode passed is not valid!"});
+            return;
+        }
+
+        User.update(
+            {
+                name: decoded.username
+            },
+            {
+                roaster: {
+                    roastingStatus: mode + '-pending', //
+                    roastStartTime: time,
+                    roastProfileID: roast
+                }
+            },
+            {
+                upsert: true
+            },
+            function (err) {
                 if (err) {
                     console.log(err);
                     res.json({success: false, error: err});
                 }
+                else {
+                    res.json({success: true, msg: 'Roast profile successfully set to ' + mode + '-pending!'});
+                }
+            }
+        );
 
-                //update users roasting profiles array
-                User.update(
-                    decoded.username,
-                    {
-                        $push: {
-                            roastingprofiles: req.body.name
-                        }
-                    },
-                    {
-                        upsert: true
-                    },
-                    function (err) {
-                        if (err) {
-                            console.log(err);
-                            res.json({success: false, error: err});
-                        }
-                        else {
-                            res.json({success: true, msg: 'Roast profile successfully created!'})
-                        }
-                    }
-                );
+    }
 
-            });
-        }
-        //no token was found on the header of the request
-    } else {
+    else {
         //error response
         return res.status(403).send({success: false, msg: 'No token provided.'});
     }
-});
-
-/**
- * Returns a list of all roasting profiles in the database
- */
-router.get('/', function (req, res) {
-
-    Roast.find({}, function (err, roasts) {
-
-        if (err) {
-            console.log(err);
-            res.json({success: false, error: err});
-        }
-
-        res.json({success: true, roasts: roasts});
-    });
 
 });
 
 /**
- * Returns a specific roast profile
- *
- * Note:
- *     If the name of the roast is multiple words do not
- *     wrap in quotes send as is.
+ * State update from roaster
  */
-router.get('/:name', function (req, res) {
+router.post('/roaster/:mode', function (req, res) {
 
-    Roast.find({name: req.params.name}, function (err, roast) {
+    //grab authentication token sent from the client that was attached to header
+    var token = getToken(req.headers);
 
-        if (err) {
-            console.log(err);
-            res.json({success: false, error: err});
+    if (token) {
+
+        var decoded = jwt.decode(token, config.secret);
+        var mode = req.params.mode;
+        var roast = req.query.roastName;
+        var time = req.query.time;
+
+        console.log(mode);
+
+        //check if required parameters have been passed
+        if(roast == null || mode == null){
+            res.json({success: false, msg: "Make sure that you have passed both the mode you would like to set the roaster to along with the roast name that will run!"});
+            return;
         }
 
-        res.json({success: true, roast: roast});
+        //is the mode valid?
+        if (mode != "start" && mode != "pause" && mode != "stop") {
+            res.json({success: false, msg: "The mode passed is not valid!"});
+            return;
+        }
 
-    });
+        User.update(
+            {
+                name: decoded.username
+            },
+            {
+                roaster: {
+                    roastingStatus: mode,
+                    roastStartTime: time,
+                    roastProfileID: roast
+                }
+            },
+            {
+                upsert: true
+            },
+            function (err) {
+                if (err) {
+                    console.log(err);
+                    res.json({success: false, error: err});
+                }
+                else {
+                    res.json({success: true, msg: 'Your roaster is now in ' + mode + 'mode'});
+                }
+            }
+        );
+
+    }
+
+    else {
+        //error response
+        return res.status(403).send({success: false, msg: 'No token provided.'});
+    }
 
 });
 
-router.post('/:name/rateup', function (req, res) {
 
-    Roast.update(
-        {
-            name: req.params.name
-        },
-        {
-            $inc: {
-                rating: 1  //increment rating by 1
-            }
-        },
-        {
-            upsert: true
-        },
-        function (err) {
-            if (err) {
-                console.log(err);
-                console.log(req.params.name);
-                res.json({success: false, error: err});
-            }
-            else {
-                console.log(req.params.name);
-                res.json({success: true, msg: 'Roast profile successfully rated up!'})
-            }
-        }
-    );
-
-});
-
-router.post('/:name/ratedown', function (req, res) {
-    Roast.update(
-        {
-            name: req.params.name
-        },
-        {
-            $inc: {
-                rating: -1  //decrement rating by 1
-            }
-        },
-        {
-            upsert: true
-        },
-        function (err) {
-            if (err) {
-                console.log(err);
-                console.log(req.params.name);
-                res.json({success: false, error: err});
-            }
-            else {
-                console.log(req.params.name);
-                res.json({success: true, msg: 'Roast profile successfully rated down!'})
-            }
-        }
-    );
-});
 
 module.exports = router;

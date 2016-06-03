@@ -34,7 +34,7 @@ router.post('/', function (req, res) {
                 RoastingData: req.body.RoastingData,
                 rating: 0   //initially 0
             });
-
+            //Save roast in roasting profile document
             newRoast.save(function (err) {
                 if (err) {
                     console.log(err);
@@ -177,7 +177,7 @@ router.get('/type/:type', function (req, res) {
             roastType: req.params.type
         },
         function (err, roasts) {
-            if(err) {
+            if (err) {
                 console.log(err);
                 res.json({success: false, msg: err});
             }
