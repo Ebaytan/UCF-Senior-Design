@@ -21,13 +21,14 @@ var jwt = require('jwt-simple');
  *          Valid options: start, pause, stop
  *      time=
  *          When the roasting started hh:mm:ss
-*       roastname=
- *          The name of the roast that is currently loaded on the roaster
+ *      roastData=
+ *          The name of the roast that is currently loaded on the
+ *          roaster or if in mode 'live' the temperature, fan rate tuple
  *
  *  @return
  *
  */
-router.post('/client/:mode', function (req, res) {
+router.post('/client', function (req, res) {
 
     //grab authentication token sent from the client that was attached to header
     var token = getToken(req.headers);
@@ -35,23 +36,31 @@ router.post('/client/:mode', function (req, res) {
     if (token) {
 
         var decoded = jwt.decode(token, config.secret);
-        var mode = req.params.mode;
-        var roast = req.query.roastName;
-        var time = req.query.time;
+
+        //in url with name=value
+        var mode = req.query.mode;
+        var roast = req.query.roastData;
 
         console.log(mode);
 
         //check if required parameters have been passed
-        if(roast == null || mode == null){
-            res.json({success: false, msg: "Make sure that you have passed both the mode you would like to set the roaster to along with the roast name that will run!"});
+        if (roast == null || mode == null) {
+            res.json({
+                success: false,
+                msg: "Make sure that you have passed both the mode you would like to set the roaster to along with the roast name that will run!"
+            });
             return;
         }
 
         //is the mode valid?
-        if (mode != "start" && mode != "pause" && mode != "stop") {
+        if (mode != "start" && mode != "pause" && mode != "stop" && mode != "live") {
             res.json({success: false, msg: "The mode passed is not valid!"});
             return;
         }
+
+        //the -pending end is only needed for non-live operations
+        if (mode != "live")
+            mode += "-pending";
 
         User.update(
             {
@@ -59,9 +68,9 @@ router.post('/client/:mode', function (req, res) {
             },
             {
                 roaster: {
-                    roastingStatus: mode + '-pending', //
-                    roastStartTime: time,
-                    roastProfileID: roast
+                    roastingStatus: mode,
+                    roastData: roast == null ? "same" : roast       //if in mode 'live' then will hold a tuple of data => 225,30 => temp,fan rate
+                                                                    //otherwise, will hold the name of the currently running roast
                 }
             },
             {
@@ -72,25 +81,22 @@ router.post('/client/:mode', function (req, res) {
                     console.log(err);
                     res.json({success: false, error: err});
                 }
-                else {
-                    res.json({success: true, msg: 'Roast profile successfully set to ' + mode + '-pending!'});
-                }
+
+
+                res.json({success: true, msg: 'Roast profile successfully set to ' + mode});
             }
         );
-
     }
-
     else {
         //error response
         return res.status(403).send({success: false, msg: 'No token provided.'});
     }
-
 });
 
 /**
  * State update from roaster
  */
-router.post('/roaster/:mode', function (req, res) {
+router.post('/roaster', function (req, res) {
 
     //grab authentication token sent from the client that was attached to header
     var token = getToken(req.headers);
@@ -98,20 +104,27 @@ router.post('/roaster/:mode', function (req, res) {
     if (token) {
 
         var decoded = jwt.decode(token, config.secret);
-        var mode = req.params.mode;
-        var roast = req.query.roastName;
+
+        //will be in url after ?
+        var mode = req.query.mode;
+        var roast = req.query.roastData;
         var time = req.query.time;
 
-        console.log(mode);
+        console.log("mode => " + mode);
+        console.log("roast => " + roast);
+        console.log("time => " + time);
 
         //check if required parameters have been passed
-        if(roast == null || mode == null){
-            res.json({success: false, msg: "Make sure that you have passed both the mode you would like to set the roaster to along with the roast name that will run!"});
+        if (roast == null || mode == null) {
+            res.json({
+                success: false,
+                msg: "Make sure that you have passed both the mode you would like to set the roaster to along with the roast name that will run!"
+            });
             return;
         }
 
         //is the mode valid?
-        if (mode != "start" && mode != "pause" && mode != "stop") {
+        if (mode != "start" && mode != "pause" && mode != "stop" && mode != "live") {
             res.json({success: false, msg: "The mode passed is not valid!"});
             return;
         }
@@ -124,7 +137,8 @@ router.post('/roaster/:mode', function (req, res) {
                 roaster: {
                     roastingStatus: mode,
                     roastStartTime: time,
-                    roastProfileID: roast
+                    roastData: roast            //if in mode 'live' then will hold a tuple of data => 225,30 => temp,fan rate
+                                                //otherwise, will hold the name of the currently running roast
                 }
             },
             {
@@ -136,20 +150,67 @@ router.post('/roaster/:mode', function (req, res) {
                     res.json({success: false, error: err});
                 }
                 else {
-                    res.json({success: true, msg: 'Your roaster is now in ' + mode + 'mode'});
+                    res.json({success: true, msg: 'Your roaster is now in ' + mode + ' mode'});
                 }
             }
         );
-
     }
-
     else {
         //error response
         return res.status(403).send({success: false, msg: 'No token provided.'});
     }
-
 });
 
 
+//update on roast from either client or roaster via GET
+router.get('/', function (req, res) {
+
+    //grab authentication token sent from the client that was attached to header
+    var token = getToken(req.headers);
+
+    if (token) {
+
+        var decoded = jwt.decode(token, config.secret);
+
+        User.find(
+            {
+                name: decoded.username
+            },
+            function (err, user) {
+                if (err){
+                    res.json({success: false, error: err});
+                    return;
+                }
+
+
+                console.log("user => " + user);
+
+                if (user[0].roaster.roastingStatus == "start-pending") {
+                    //get roast data
+                    Roast.find(
+                        {
+                            name: user[0].roaster.roastData
+                        },
+                        function (err, roast) {
+                            if (err)  res.json({success: false, error: err});
+
+                            console.log("roast => " + roast);
+
+                            res.json({success: true, roaster: user[0].roaster, roastData: roast[0]});
+                        }
+                    );
+
+                    return;
+                }
+
+                res.json({success: true, roaster: user[0].roaster});
+            }
+        );
+    }
+    else {
+        //error response
+        return res.status(403).send({success: false, msg: 'No token provided.'});
+    }
+});
 
 module.exports = router;

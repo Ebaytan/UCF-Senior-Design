@@ -33,9 +33,10 @@ var UserSchema = new Schema({
             type: String,
             required: true
         },
-        roastingStatus: String,   //Roasting or Not
+        roastingStatus: String,     //current mode of operation
         roastStartTime: String,
-        roastProfileID: String
+        roastData: String           //if in mode 'live' then will hold a tuple of data => 225,30 => temp,fan rate
+                                    //otherwise, will hold the name of the currently running roast
     },
 
     roastingprofiles: []
