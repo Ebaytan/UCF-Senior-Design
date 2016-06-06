@@ -27,6 +27,11 @@ router.post('/signup', function (req, res) {
             email: req.body.email,
             roaster: {
                 roasterUID: req.body.roasterUID
+            },
+            rating: {
+                avgRating: 0,               //total number of ratings
+                totalAccRating: 0,          //Total accumulated ratings
+                numberofRatings: 0          //Total number of ratings
             }
         });
         newUser.save(function (err) {

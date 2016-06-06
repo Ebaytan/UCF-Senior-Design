@@ -16,8 +16,8 @@ var jwt = require('jwt-simple');
  */
 /**
  * Will update the roaster object within the user object.
- *  @params
- *      :mode
+ *  @query
+ *      mode
  *          Valid options: start, pause, stop
  *      time=
  *          When the roasting started hh:mm:ss
@@ -107,8 +107,8 @@ router.post('/roaster', function (req, res) {
 
         //will be in url after ?
         var mode = req.query.mode;
+        var time = Date.now();
         var roast = req.query.roastData;
-        var time = req.query.time;
 
         console.log("mode => " + mode);
         console.log("roast => " + roast);
@@ -137,8 +137,7 @@ router.post('/roaster', function (req, res) {
                 roaster: {
                     roastingStatus: mode,
                     roastStartTime: time,
-                    roastData: roast            //if in mode 'live' then will hold a tuple of data => 225,30 => temp,fan rate
-                                                //otherwise, will hold the name of the currently running roast
+                    roastData: roast
                 }
             },
             {
@@ -177,7 +176,7 @@ router.get('/', function (req, res) {
                 name: decoded.username
             },
             function (err, user) {
-                if (err){
+                if (err) {
                     res.json({success: false, error: err});
                     return;
                 }
@@ -185,7 +184,7 @@ router.get('/', function (req, res) {
 
                 console.log("user => " + user);
 
-                if (user[0].roaster.roastingStatus == "start-pending") {
+                if (user[0].roaster.roastingStatus != "stop"  && user[0].roaster.roastingStatus != "stop-pending") {
                     //get roast data
                     Roast.find(
                         {

@@ -21,11 +21,10 @@ var UserSchema = new Schema({
     },
     //Will initially be null until a roasting profile is rated
     rating: {
-        avgRating: String,          //total/number of ratings
+        avgRating: Number,          //total/number of ratings
         totalAccRating: Number,     //Total accumulated ratings
         numberofRatings: Number     //Total number of ratings
     },
-
 
     roaster: {
         //unique identifier for each roaster (Assuming each user has only one roaster)
