@@ -10,7 +10,6 @@ var jwt = require('jwt-simple');
 
 //root uri /api/control
 
-
 /**
  * From iOS
  */
@@ -181,10 +180,10 @@ router.get('/', function (req, res) {
                     return;
                 }
 
-
                 console.log("user => " + user);
 
-                if (user[0].roaster.roastingStatus != "stop"  && user[0].roaster.roastingStatus != "stop-pending") {
+                //If the roast has stopped or is stopping there is no need to pass any roast data
+                if (user[0].roaster.roastingStatus != "stop" && user[0].roaster.roastingStatus != "stop-pending") {
                     //get roast data
                     Roast.find(
                         {
