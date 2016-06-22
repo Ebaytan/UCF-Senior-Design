@@ -172,7 +172,7 @@ router.get('/', function (req, res) {
 
         User.find(
             {
-                name: decoded.username
+                username: decoded.username
             },
             function (err, user) {
                 if (err) {
