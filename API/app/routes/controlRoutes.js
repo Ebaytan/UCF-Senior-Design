@@ -63,7 +63,7 @@ router.post('/client', function (req, res) {
 
         User.update(
             {
-                name: decoded.username
+                username: decoded.username
             },
             {
                 roaster: {
@@ -130,7 +130,7 @@ router.post('/roaster', function (req, res) {
 
         User.update(
             {
-                name: decoded.username
+                username: decoded.username
             },
             {
                 roaster: {

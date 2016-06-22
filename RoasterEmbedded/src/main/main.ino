@@ -46,12 +46,17 @@ void setup(void)
   liveRoastView();
   delay(3000);
 
+  //set pin 6 to 62500 / 2 Hz = 31.25 kHz
+  setPwmFrequency(6,2);
+
+  Serial.println("Set pin 6's frequency to 31250");
 }
 
 void loop() {
 
   //has the screen been touched
-  if (!ts.bufferEmpty()) {
+  //if (!ts.bufferEmpty()) {
+  if (ts.touched()) {
     // Retrieve a point
     TS_Point p = ts.getPoint();
     // Scale using the calibration #'s
@@ -99,9 +104,9 @@ void loop() {
       }
     }
 
-    delay(2000);
-
   }
+
+  //delay(2000);
 }
 
 /**
@@ -176,31 +181,97 @@ unsigned long liveRoastView() {
 void updateValuesButton(unsigned int type) {
   switch (type) {
     case 0:
-      targetTemp -= 5;
+      //targetTemp -= 5;
+      targetTemp >= 105 ? targetTemp -= 5 : targetTemp = 100;
+      if(targetTemp > 300) targetTemp = 300;
+      //setDutyCycle(targetTemp);
       tft.setCursor(70, 170);
       tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
       tft.println(targetTemp);
+      Serial.println(targetTemp);
       break;
     case 1:
-      targetTemp += 5;
+      targetTemp <= 295 ? targetTemp += 5 : targetTemp = 300;
+      if(targetTemp > 300) targetTemp = 300;
+      //setDutyCycle(targetTemp);
       tft.setCursor(70, 170);
       tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
       tft.println(targetTemp);
+      Serial.println(targetTemp);
+      //Note: after lcd updated make http request
       break;
     case 2:
-      targetFanRate -= 5;
+      targetFanRate >= 5 ? targetFanRate -= 5 : targetFanRate = 0;
+      if(targetFanRate > 100) targetFanRate = 100;  //maybe set to 0?? weird bug
       tft.setCursor(200, 170);
       tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
       tft.println(targetFanRate);
       break;
     case 3:
-      targetFanRate += 5;
+      targetFanRate <= 95 ? targetFanRate += 5 : targetFanRate = 100;
+      if(targetFanRate > 100) targetFanRate = 100;
       tft.setCursor(200, 170);
       tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
       tft.println(targetFanRate);
       break;
-      
   }
 
+  //delay(1000);
+
+}
+
+/**
+ * Will take the target temperature and calculate the necessary duty cycle and
+ * set it to that value.
+ * Reference: https://www.arduino.cc/en/Tutorial/PWM
+ * 
+ * target temperature that we would like to go to
+ */
+void setDutyCycle(int target){
+
+  //from 0 to 255, 0% to 100%
+  //analogWrite(TEMP_CONTROL_PIN, target/something);
+  
+}
+
+/**
+ * Will take the voltage across the temp sensor and
+ * convert that into degrees Farenheit
+ */
+double getCurrentTemp(){
+  //sample temperature
+
+  return 0.0;
+}
+
+void setPwmFrequency(int pin, int divisor) {
+  byte mode;
+  if(pin == 5 || pin == 6 || pin == 9 || pin == 10) {
+    switch(divisor) {
+      case 1: mode = 0x01; break;
+      case 8: mode = 0x02; break;
+      case 64: mode = 0x03; break;
+      case 256: mode = 0x04; break;
+      case 1024: mode = 0x05; break;
+      default: return;
+    }
+    if(pin == 5 || pin == 6) {
+      TCCR0B = TCCR0B & 0b11111000 | mode;
+    } else {
+      TCCR1B = TCCR1B & 0b11111000 | mode;
+    }
+  } else if(pin == 3 || pin == 11) {
+    switch(divisor) {
+      case 1: mode = 0x01; break;
+      case 8: mode = 0x02; break;
+      case 32: mode = 0x03; break;
+      case 64: mode = 0x04; break;
+      case 128: mode = 0x05; break;
+      case 256: mode = 0x06; break;
+      case 1024: mode = 0x7; break;
+      default: return;
+    }
+    TCCR2B = TCCR2B & 0b11111000 | mode;
+  }
 }
 
