@@ -156,9 +156,8 @@ router.post('/roaster', function (req, res) {
     else {
         //error response
         return res.status(403).send({success: false, msg: 'No token provided.'});
-    }
+    }   
 });
-
 
 //update on roast from either client or roaster via GET
 router.get('/', function (req, res) {
