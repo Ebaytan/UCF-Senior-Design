@@ -24,9 +24,21 @@
     <ClInclude Include="Views.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HeatControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WeightInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Views.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HeatControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WeightInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

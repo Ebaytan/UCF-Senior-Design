@@ -183,6 +183,11 @@ router.get('/', function (req, res) {
 
                 //If the roast has stopped or is stopping there is no need to pass any roast data
                 if (user[0].roaster.roastingStatus != "stop" && user[0].roaster.roastingStatus != "stop-pending") {
+
+                    //get date values
+                    let myDate = new Date();
+                    
+
                     //get roast data
                     Roast.find(
                         {
@@ -193,7 +198,7 @@ router.get('/', function (req, res) {
 
                             console.log("roast => " + roast);
 
-                            res.json({success: true, roaster: user[0].roaster, roastData: roast[0]});
+                            res.json({success: true, roaster: user[0].roaster, roastData: roast[0], date: new Date()});
                         }
                     );
 

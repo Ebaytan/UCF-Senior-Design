@@ -2,11 +2,13 @@
   Main entry file for RoastRight embedded system
 */
 
+#include "WeightInterface.h"
+#include "HeatControl.h"
 #include <Wire.h>
 #include <SPI.h>
 #include <max6675.h>
 #include <registers.h>
-#include <pin_magic.h>
+//#include <pin_magic.h>
 #include <Adafruit_TFTLCD.h>
 #include <Adafruit_STMPE610.h>
 #include <Adafruit_ILI9341.h>
@@ -14,53 +16,32 @@
 #include <Adafruit_GFX.h>
 #include "Views.h"
 
-
 View myView = View();
-
+ViewState myViewState;
+HeatControl hControl;
 
 void setup(void)
 {
   Serial.begin(9600); //begin serial communication
 
   myView.initView(); //initializes the values and objects necessary for the display
-
+  myViewState = ViewState::Live;
+  myView.setView(myViewState);
+  
   //set pin 6 to 62500 / 2 Hz = 31.25 kHz
-  setPwmFrequency(6,2);
+  //setPwmFrequency(6,2);
 
-  Serial.println("Set pin 6's frequency to 31250");
+  //Serial.println("Set pin 6's frequency to 31250");
 }
 
 void loop() {
 
-	if(myView.)
+	//if(myView-)
 
 	myView.liveRoastViewCheck();
+	//hControl.updateHeatingElement();
 
 	//check the view type
-}
-
-/**
- * Will take the target temperature and calculate the necessary duty cycle and
- * set it to that value.
- * Reference: https://www.arduino.cc/en/Tutorial/PWM
- * 
- * target temperature that we would like to go to
- */
-void setDutyCycle(int target){
-
-  //from 0 to 255, 0% to 100%
-  //analogWrite(TEMP_CONTROL_PIN, target/something);
-  
-}
-
-/**
- * Will take the voltage across the temp sensor and
- * convert that into degrees Farenheit
- */
-double getCurrentTemp(){
-  //sample temperature
-
-  return 0.0;
 }
 
 void setPwmFrequency(int pin, int divisor) {
@@ -93,4 +74,5 @@ void setPwmFrequency(int pin, int divisor) {
     TCCR2B = TCCR2B & 0b11111000 | mode;
   }
 }
+
 

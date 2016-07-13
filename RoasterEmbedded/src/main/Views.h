@@ -12,6 +12,13 @@
 
 #endif
 
+enum class ViewState {
+	Live,
+	Predefined,
+	Home
+};
+
+
 class View {
 public:
 	View ();
@@ -48,13 +55,13 @@ public:
 	* Will check for button presses and relevant data for 
 	* the live roast view
 	*/
-	void View::liveRoastViewCheck();
+	void liveRoastViewCheck();
 
 	/**
 	* Will change the view of the lcd.  For example if we click the home button
 	* we would change the ViewState to Home
 	*/
-	void View::setView(ViewState setTo);
+	void setView(ViewState setTo);
 
 
 private:

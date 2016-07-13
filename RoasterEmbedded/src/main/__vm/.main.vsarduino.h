@@ -50,6 +50,10 @@ extern "C" void __cxa_pure_virtual() {;}
 #undef PSTR
 #define PSTR(string_literal) ((const PROGMEM char *)(string_literal))")
 #include <main.ino>
+#include <HeatControl.cpp>
+#include <HeatControl.h>
 #include <Views.cpp>
 #include <Views.h>
+#include <WeightInterface.cpp>
+#include <WeightInterface.h>
 #endif

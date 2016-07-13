@@ -8,6 +8,7 @@
 #include <Wire.h>
 #include <Adafruit_ILI9341.h>
 #include <Adafruit_STMPE610.h>
+#include <max6675.h>
 
 // This is calibration data for the raw touch data to the screen coordinates
 #define TS_MINX 150
@@ -29,15 +30,9 @@ int targetFanRate = 45;
 
 ViewState currentState;
 
-
-enum class ViewState{
-	Live,
-	Predefined,
-	Home
-};
-
 View::View()
 {
+	//currentState = new ViewState();
 	currentState = ViewState::Live;
 }
 
@@ -197,7 +192,7 @@ void View::liveRoastViewCheck() {
 	//delay(2000);
 }
 
-void updateValuesButton(unsigned int type) {
+void View::updateValuesButton(unsigned int type) {
 	switch (type) {
 	case 0:
 		//targetTemp -= 5;
