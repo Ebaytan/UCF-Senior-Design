@@ -6,6 +6,12 @@
 
 #define WEIGHT_SHUTDOWN_PERCENTAGE .6
 
+//TODO: Ask what pins the sensors will be on
+#define SENSOR_1 
+#define SENSOR_2
+#define SENSOR_3
+#define SENSOR_4
+
 Weight::Weight(int Sensor1, int Sensor2, int Sensor3, int Sensor4)
 {
 	this->Sensor1Pin = Sensor1;
@@ -40,7 +46,7 @@ float Weight::getTotalWeight()
 	tempVoltage /= 1000; //convert into mV
 	tempWeight += (tempVoltage - 14.98) / .57;
 
-	//get weight on load 3
+	//get weight on load 4
 	//tempADCVal = analogRead(Sensor4Pin);
 	//tempVoltage = (tempADCVal / 1023) * 5; //voltage, max = 5
 	//tempVoltage /= 1000; //convert into mV

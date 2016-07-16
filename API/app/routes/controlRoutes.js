@@ -7,6 +7,7 @@ var Roast = require('../models/roastModel'); // get the mongoose model
 var User = require('../models/user');
 require('../../config/passport')(passport);
 var jwt = require('jwt-simple');
+var http = require('http');
 
 //root uri /api/control
 
@@ -107,6 +108,7 @@ router.post('/roaster', function (req, res) {
         //will be in url after ?
         var mode = req.query.mode;
         var time = Date.now();
+        var timeString = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
         var roast = req.query.roastData;
 
         console.log("mode => " + mode);
@@ -128,6 +130,11 @@ router.post('/roaster', function (req, res) {
             return;
         }
 
+
+
+
+
+
         User.update(
             {
                 username: decoded.username
@@ -136,6 +143,7 @@ router.post('/roaster', function (req, res) {
                 roaster: {
                     roastingStatus: mode,
                     roastStartTime: time,
+                    roastDuration: "temp",
                     roastData: roast
                 }
             },
@@ -156,7 +164,7 @@ router.post('/roaster', function (req, res) {
     else {
         //error response
         return res.status(403).send({success: false, msg: 'No token provided.'});
-    }   
+    }
 });
 
 //update on roast from either client or roaster via GET
@@ -185,8 +193,8 @@ router.get('/', function (req, res) {
                 if (user[0].roaster.roastingStatus != "stop" && user[0].roaster.roastingStatus != "stop-pending") {
 
                     //get date values
-                    let myDate = new Date();
-                    
+                    var myDate = new Date();
+                    var myDateString = myDate.getHours() + ':' + myDate.getMinutes() + ':' + myDate.getSeconds();
 
                     //get roast data
                     Roast.find(
@@ -198,7 +206,12 @@ router.get('/', function (req, res) {
 
                             console.log("roast => " + roast);
 
-                            res.json({success: true, roaster: user[0].roaster, roastData: roast[0], date: new Date()});
+                            res.json({
+                                success: true,
+                                roaster: user[0].roaster,
+                                roastData: roast[0],
+                                date: myDateString
+                            });
                         }
                     );
 
@@ -214,5 +227,21 @@ router.get('/', function (req, res) {
         return res.status(403).send({success: false, msg: 'No token provided.'});
     }
 });
+
+//
+function getRoastData(roastName) {
+
+    http.get({
+        host: 'ec2-54-174-178-132.compute-1.amazonaws.com',
+        path: '/',
+        agent: false
+    }, function(response) {
+        return response;
+    });
+
+}
+
+
+
 
 module.exports = router;

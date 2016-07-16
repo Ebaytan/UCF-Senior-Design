@@ -14,12 +14,11 @@
 
 class HeatControl {
 public:
-	HeatControl();
-
 	/**
-	* Will initialize the heating element
+	* Will initialize the heating element object and set pins as
+	* INPUT or OUTPUT as necessary
 	*/
-	void initHeatControl();
+	HeatControl();
 
 	/*
 		Will alter the heating element depending on the difference
@@ -27,6 +26,5 @@ public:
 	*/
 	void updateHeatingElement();
 
-	void setDutyCycle(int onOff);
 
 };

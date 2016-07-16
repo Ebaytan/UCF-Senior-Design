@@ -5,28 +5,35 @@
 #include "HeatControl.h"
 #include <max6675.h>
 
-int thermoDO = 4;
-int thermoCS = 5;
-int thermoCLK = 6;
+#define thermoDO  4
+#define thermoCS  5
+#define thermoCLK 6
 
 #define TARGET_TEMP 250
 #define TEMP_CONTROL_PIN 3
 
-MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
-int vccPin = 3;
-int gndPin = 2;
+//heating element pins
+#define HEATING_1 37
+#define HEATING_2 44
+
+// ThermoCouple
+#define thermo_gnd_pin 45
+#define thermo_vcc_pin 47
+#define thermo_so_pin 49
+#define thermo_cs_pin 23
+#define thermo_sck_pin 53
+
+MAX6675 thermocouple(thermo_sck_pin, thermo_cs_pin, thermo_so_pin);
 
 HeatControl::HeatControl() {
-	// use Arduino pins
-	pinMode(vccPin, OUTPUT); digitalWrite(vccPin, HIGH);
-	pinMode(gndPin, OUTPUT); digitalWrite(gndPin, LOW);
-
-	// wait for MAX chip to stabilize
-	delay(500);
-}
-
-void HeatControl::initHeatControl()
-{
+	// configure pins for temp sensor
+	pinMode(thermo_vcc_pin, OUTPUT);
+	pinMode(thermo_gnd_pin, OUTPUT);
+	digitalWrite(thermo_vcc_pin, HIGH);
+	digitalWrite(thermo_gnd_pin, LOW);
+	digitalWrite(thermo_cs_pin, HIGH);
+	pinMode(HEATING_1, OUTPUT); //heating 1 
+	pinMode(HEATING_2, OUTPUT); //heating 2
 }
 
 void HeatControl::updateHeatingElement()
@@ -40,15 +47,20 @@ void HeatControl::updateHeatingElement()
 
 	//Safety:
 	//If the temperature meets or exceeds 475 degrees Farenheit turn
-	//off the heating element.
+	//off the heating elements.
 	if (currentTemp >= 475) {
-		setDutyCycle(0);
+		analogWrite(HEATING_2, 0);
+		analogWrite(HEATING_1, 0);
 	}
 	//if our current temperature is above
 	//our target temp by 5 degrees or more
 	//we will shut down the heating element until
 	//that condition no longer applies
 	else if (currentTemp >= TARGET_TEMP + 5) {
+
+		analogWrite(HEATING_2, 0);
+		analogWrite(HEATING_1, 0);
+
 		//set duty cycle to 0
 		setDutyCycle(0);
 		Serial.println("Set heating element off!");
@@ -57,14 +69,10 @@ void HeatControl::updateHeatingElement()
 	}
 	else if (currentTemp > TARGET_TEMP + 10) {
 		//turn on fan
+		analogWrite(HEATING_2, 255);
 	}
 	else {
 		setDutyCycle(255);
 		Serial.println("Heating element has been turned on!");
 	}
-}
-
-void HeatControl::setDutyCycle(int onOff)
-{
-	analogWrite(TEMP_CONTROL_PIN, onOff);
 }

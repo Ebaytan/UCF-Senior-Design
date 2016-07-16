@@ -13,11 +13,10 @@
 #endif
 
 enum class ViewState {
-	Live,
-	Predefined,
-	Home
+	Live,  // not used in project, but is being used as a gui example
+	Predefined, //when start roast
+	Home //idle
 };
-
 
 class View {
 public:

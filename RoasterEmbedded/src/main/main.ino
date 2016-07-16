@@ -1,5 +1,44 @@
 /*
   Main entry file for RoastRight embedded system
+
+Flow:  
+Mode = idle: (Default when system turns on)
+	1) Setup pins as input and output
+	Loop:
+	2) Change view to the idle view
+	3) check if new command has been received
+		a. No new command received
+			i. continue current mode
+		b. New command received
+			i. Command is not start
+				a. If mode is idle
+					1. go back to 3).
+			ii. Command is start
+				a. Parse data and populate wifi data object
+				b. Change view to roast in progress
+				c. Change mode to roasting (look below)
+
+Mode = roasting:
+	1) Update API verifying that the roast has begun
+	2) Get values specific to roast (name, type, creator) and populate fields in view
+	3) Turn on secondary heating element
+	4) Turn on barrel motor
+	Loop:
+	5) Check for new command
+		a. We have received new command
+			i. command start
+	6) Check current temperature and compare to target temp
+		a. Is current temp >= 475?
+			i.  Turn off heating elements
+			ii.  Turn on intake and outake fans
+		b. Is current temp 5 degrees above target?
+			i. Yes => Turn off heating element, turn off fans (if they were on)
+			ii. No => Keep heating element on or turn it back on if it was off
+		c. Is current temp 30 degrees above target?
+			i.  Yes => Turn on intake and outake fans
+			ii. No => Continue
+	7) A lot of smoke (trial and error since we don't have smoke)
+
 */
 
 #include "WeightInterface.h"
