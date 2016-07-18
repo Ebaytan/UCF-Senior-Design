@@ -1,5 +1,7 @@
 // HeatControl.h
 
+//#include "Views.h"
+
 #ifndef _HEATCONTROL_h
 #define _HEATCONTROL_h
 
@@ -8,7 +10,6 @@
 #else
 	#include "WProgram.h"
 #endif
-
 
 #endif
 
@@ -26,5 +27,22 @@ public:
 	*/
 	void updateHeatingElement();
 
+	/**
+	* returns the current temperature in degrees  Farenheit 
+	*/
+	double getTemp();
 
+	/*
+	*	updates the current temperature in the predefined view
+	*/
+	void updateTemp();
+	
+	/*
+	*	Will check which view state we are in and check the view
+	*	for the necessary data to update
+	*/
+	void updateViewCheck(ViewState state);
+
+private:
+	bool coolMode;
 };

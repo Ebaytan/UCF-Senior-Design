@@ -49,6 +49,12 @@ public:
 	type 3 increase fan rate by 5 percent
 	*/
 	void updateValuesButton(unsigned int type);
+
+	/**
+	* The initial view shown when the
+	* roaster starts up
+	*/
+	void homeRoastView();
 	
 	/**
 	* Will check for button presses and relevant data for 
@@ -62,8 +68,4 @@ public:
 	*/
 	void setView(ViewState setTo);
 
-
-private:
-	int8_t sclk, miso, cs;
-	uint8_t spiread(void);
 };

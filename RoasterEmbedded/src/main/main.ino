@@ -61,26 +61,15 @@ HeatControl hControl;
 
 void setup(void)
 {
-  Serial.begin(9600); //begin serial communication
-
-  myView.initView(); //initializes the values and objects necessary for the display
-  myViewState = ViewState::Live;
-  myView.setView(myViewState);
   
-  //set pin 6 to 62500 / 2 Hz = 31.25 kHz
-  //setPwmFrequency(6,2);
+	Serial.begin(9600); //begin serial communication
 
-  //Serial.println("Set pin 6's frequency to 31250");
+	myView.initView(); //initializes the values and objects necessary for the display
+  
 }
 
 void loop() {
-
-	//if(myView-)
-
-	myView.liveRoastViewCheck();
-	//hControl.updateHeatingElement();
-
-	//check the view type
+	//get request for new command
 }
 
 void setPwmFrequency(int pin, int divisor) {

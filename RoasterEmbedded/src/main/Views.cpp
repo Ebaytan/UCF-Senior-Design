@@ -16,11 +16,19 @@
 #define TS_MAXX 3800
 #define TS_MAXY 4000
 
-#define STMPE_CS 8
-Adafruit_STMPE610 ts = Adafruit_STMPE610(STMPE_CS);
-#define TFT_CS 10
-#define TFT_DC 9
-Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
+//goes here
+#define TFT_DC 46
+#define TFT_CS 5
+#define TFT_MOSI 9
+#define TFT_CLK 6
+#define TFT_RST 8
+#define TFT_MISO 7
+
+
+// Use hardware SPI (on Uno, #13, #12, #11) and the above for CS/DC
+//Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
+// If using the breakout, change pins as desired
+Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_RST, TFT_MISO);
 
 //Keep track of temperature and fan rate current and target
 int currentTemp = 150;
@@ -32,8 +40,7 @@ ViewState currentState;
 
 View::View()
 {
-	//currentState = new ViewState();
-	currentState = ViewState::Live;
+	currentState = ViewState::Home;
 }
 
 void View::setView(ViewState setTo) {
@@ -51,7 +58,7 @@ void View::setView(ViewState setTo) {
 		break;
 	case (ViewState::Home) :
 		currentState = ViewState::Home;
-		//hello.homeRoastView();
+		hello.homeRoastView();
 		break;
 		
 	}
@@ -60,21 +67,14 @@ void View::setView(ViewState setTo) {
 void View::initView()
 {
 	tft.begin();  //begin listening for touch
-	if (!ts.begin()) {
-		Serial.println("Unable to start touchscreen.");
-	}
-	else {
-		Serial.println("Touchscreen started.");
-	}
 
 	tft.fillScreen(ILI9341_WHITE);
 	// origin = left,top landscape (USB left upper)
-	tft.setRotation(1);
+	tft.setRotation(3);
 
-	Serial.println("Running liveRoastView()");
+	View::setView(ViewState::Predefined);
 
-	View::setView(ViewState::Live);
-	delay(3000);
+	delay(1000);  //my not need this delay
 	
 }
 
@@ -136,100 +136,51 @@ void View::liveRoastView()
 
 }
 
-void View::liveRoastViewCheck() {
-	//has the screen been touched
-	//if (!ts.bufferEmpty()) {
-	if (ts.touched()) {
-		// Retrieve a point
-		TS_Point p = ts.getPoint();
-		// Scale using the calibration #'s
-		// and rotate coordinate system
-		p.x = map(p.x, TS_MINY, TS_MAXY, 0, tft.height());
-		p.y = map(p.y, TS_MINX, TS_MAXX, 0, tft.width());
-		int y = tft.height() - p.x;
-		int x = p.y;
+void View::homeRoastView() {
+	tft.setRotation(3);
+	tft.fillScreen(ILI9341_BLACK);
 
-		//    Serial.println("Pair:");
-		//    Serial.println(x);
-		//    Serial.println(y);
+	tft.setCursor(60, 60);
+	tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(3);
+	tft.println("Right Roast");
 
-		//touch on left side?
-		if (x < 160) {
-			Serial.println("Left side touched!");
+	tft.setCursor(40, 100);
+	tft.setTextColor(ILI9341_WHITE);  tft.setTextSize(2);
+	tft.println("Waiting on command...");
 
-			//down temp pressed?
-			if (x > 35 && x < 65 && y > 165 && y < 190) {
-				Serial.println("Turn down temperature pressed...");
-				updateValuesButton(0);
-			}
-
-			//up temp pressed?
-			else if (x > 108 && x < 138 && y > 165 && y < 190) {
-				Serial.println("Turn up temperature pressed...");
-				updateValuesButton(1);
-			}
-		}
-
-		//touch on the right side?
-		else if (x > 160) {
-			Serial.println("Right side touched!");
-
-			//down fan pressed?
-			if (x > 165 && x < 195 && y > 165 && y < 190) {
-				Serial.println("Turn down fan pressed...");
-				updateValuesButton(2);
-			}
-
-			//up fan pressed?
-			else if (x > 238 && x < 268 && y > 165 && y < 190) {
-				Serial.println("Turn up fan pressed...");
-				updateValuesButton(3);
-			}
-		}
-
-	}
-
-	//delay(2000);
+	yield();
 }
 
-void View::updateValuesButton(unsigned int type) {
-	switch (type) {
-	case 0:
-		//targetTemp -= 5;
-		targetTemp >= 105 ? targetTemp -= 5 : targetTemp = 100;
-		if (targetTemp > 300) targetTemp = 300;
-		//setDutyCycle(targetTemp);
-		tft.setCursor(70, 170);
-		tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
-		tft.println(targetTemp);
-		Serial.println(targetTemp);
-		break;
-	case 1:
-		targetTemp <= 295 ? targetTemp += 5 : targetTemp = 300;
-		if (targetTemp > 300) targetTemp = 300;
-		//setDutyCycle(targetTemp);
-		tft.setCursor(70, 170);
-		tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
-		tft.println(targetTemp);
-		Serial.println(targetTemp);
-		//Note: after lcd updated make http request
-		break;
-	case 2:
-		targetFanRate >= 5 ? targetFanRate -= 5 : targetFanRate = 0;
-		if (targetFanRate > 100) targetFanRate = 100;  //maybe set to 0?? weird bug
-		tft.setCursor(200, 170);
-		tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
-		tft.println(targetFanRate);
-		break;
-	case 3:
-		targetFanRate <= 95 ? targetFanRate += 5 : targetFanRate = 100;
-		if (targetFanRate > 100) targetFanRate = 100;
-		tft.setCursor(200, 170);
-		tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
-		tft.println(targetFanRate);
-		break;
-	}
+void View::preDefinedRoastView() {
+		tft.fillScreen(ILI9341_WHITE);
 
-	//delay(1000);
+		tft.setCursor(10, 10);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println("Name: French Roast");
 
+
+		tft.setCursor(10, 30);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println("Bean Type: Peruvian");
+
+		tft.setCursor(10, 50);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println("Roast Type: Dark");
+
+		//target temp label
+		tft.setCursor(20, 90);
+		tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
+		tft.println("Target Temp:");
+
+		//temperature that we are attempting to reach
+		tft.setCursor(200, 90);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println(105.5);
+
+		//current temp label
+		tft.setCursor(20, 110);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println("Current Temp:");
 }
+
+
