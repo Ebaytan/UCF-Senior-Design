@@ -40,9 +40,13 @@ public:
 	/*
 	*	Will check which view state we are in and check the view
 	*	for the necessary data to update
+	*
+	* state == 0, home
+	* state == 1, predefined
 	*/
-	void updateViewCheck(ViewState state);
+	void updateViewCheck(int state);
 
 private:
 	bool coolMode;
+	
 };

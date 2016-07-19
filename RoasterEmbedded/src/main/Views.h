@@ -60,12 +60,17 @@ public:
 	* Will check for button presses and relevant data for 
 	* the live roast view
 	*/
-	void liveRoastViewCheck();
+	//void liveRoastViewCheck();
 
 	/**
 	* Will change the view of the lcd.  For example if we click the home button
 	* we would change the ViewState to Home
 	*/
 	void setView(ViewState setTo);
+	void updateTemp(double temp);
+	ViewState currentState;
+
+private:
+
 
 };

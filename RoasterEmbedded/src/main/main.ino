@@ -59,6 +59,7 @@ View myView = View();
 ViewState myViewState;
 HeatControl hControl;
 
+
 void setup(void)
 {
   
@@ -69,7 +70,12 @@ void setup(void)
 }
 
 void loop() {
-	//get request for new command
+
+	if (myView.currentState == ViewState::Predefined) {
+		myView.updateTemp(hControl.getTemp());
+	}
+	
+	
 }
 
 void setPwmFrequency(int pin, int divisor) {
@@ -102,5 +108,3 @@ void setPwmFrequency(int pin, int divisor) {
     TCCR2B = TCCR2B & 0b11111000 | mode;
   }
 }
-
-

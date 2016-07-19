@@ -24,10 +24,6 @@
 #define TFT_RST 8
 #define TFT_MISO 7
 
-
-// Use hardware SPI (on Uno, #13, #12, #11) and the above for CS/DC
-//Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
-// If using the breakout, change pins as desired
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_RST, TFT_MISO);
 
 //Keep track of temperature and fan rate current and target
@@ -54,7 +50,7 @@ void View::setView(ViewState setTo) {
 		break;
 	case (ViewState::Predefined) :
 		currentState = ViewState::Predefined;
-		//hello.predefinedRoastView();
+		hello.preDefinedRoastView();
 		break;
 	case (ViewState::Home) :
 		currentState = ViewState::Home;
@@ -183,4 +179,12 @@ void View::preDefinedRoastView() {
 		tft.println("Current Temp:");
 }
 
+//pass temp
+void View::updateTemp(double temp)
+{
+	//current temperature value
+	tft.setCursor(200, 110);
+	tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
+	tft.println(temp);
+}
 

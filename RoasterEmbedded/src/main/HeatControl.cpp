@@ -33,21 +33,7 @@
 
 int switchState = 1;
 
-
 MAX6675 thermocouple(thermo_sck_pin, thermo_cs_pin, thermo_so_pin);
-
-#define TFT_DC 46
-#define TFT_CS 5
-#define TFT_MOSI 9
-#define TFT_CLK 6
-#define TFT_RST 8
-#define TFT_MISO 7
-
-
-// Use hardware SPI (on Uno, #13, #12, #11) and the above for CS/DC
-//Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
-// If using the breakout, change pins as desired
-Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_RST, TFT_MISO);
 
 HeatControl::HeatControl() {
 	// configure pins for temp sensor
@@ -108,33 +94,26 @@ void HeatControl::updateHeatingElement()
 
 	updateTemp();
 }
-
-void HeatControl::updateTemp()
-{
-	//current temperature value
-	tft.setCursor(200, 110);
-	tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
-	tft.println(getTemp());
-}
-
-void HeatControl::updateViewCheck(ViewState state)
+//probably not needed
+void HeatControl::updateViewCheck(int state)
 {
 	//We are currenlty roasting beans
-	if (state == ViewState::Predefined) {
+	if (state == 1) {
 		updateTemp();
 	}
 	//idle view, first view seen when you start up roaster
-	if (state == ViewState::Home) {
+	if (state == 0) {
 
 	}
 }
 
-double getTemp() {
+double HeatControl::getTemp() {
 	double temp;
 
 	Serial.print("Temp (F): ");
 	temp = thermocouple.readFahrenheit();
 	Serial.println(temp);
+	delay(100);
 
 	return temp;
 }
