@@ -108,7 +108,7 @@ router.post('/roaster', function (req, res) {
         //will be in url after ?
         var mode = req.query.mode;
         var time = Date.now();
-        var timeString = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+        //var timeString = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
         var roast = req.query.roastData;
 
         console.log("mode => " + mode);
@@ -130,11 +130,6 @@ router.post('/roaster', function (req, res) {
             return;
         }
 
-
-
-
-
-
         User.update(
             {
                 username: decoded.username
@@ -142,7 +137,6 @@ router.post('/roaster', function (req, res) {
             {
                 roaster: {
                     roastingStatus: mode,
-                    roastStartTime: time,
                     roastDuration: "temp",
                     roastData: roast
                 }
