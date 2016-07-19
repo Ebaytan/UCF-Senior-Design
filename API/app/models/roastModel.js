@@ -27,7 +27,7 @@ var RoastSchema = new Schema({
     //target temperature
     RoastingData: {
         required: true,
-        type: Number
+        type: String
     }
 });
 

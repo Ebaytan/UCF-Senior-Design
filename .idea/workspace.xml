@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11c88ef8-7908-405a-9a3e-029d9918743d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/app/models/roastModel.js" afterPath="$PROJECT_DIR$/API/app/models/roastModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/app/models/user.js" afterPath="$PROJECT_DIR$/API/app/models/user.js" />
     </list>
     <ignored path="UCF-Senior-Design.iws" />
@@ -46,8 +47,8 @@
       <file leaf-file-name="roastModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/app/models/roastModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="482">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,8 +57,8 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/app/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state relative-caret-position="328">
+              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -105,8 +106,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Web-Client/app/test.js" />
         <option value="$PROJECT_DIR$/API/app/routes/controlRoutes.js" />
-        <option value="$PROJECT_DIR$/API/app/models/roastModel.js" />
         <option value="$PROJECT_DIR$/API/app/models/user.js" />
+        <option value="$PROJECT_DIR$/API/app/models/roastModel.js" />
       </list>
     </option>
   </component>
@@ -365,12 +366,12 @@
       <workItem from="1468611372533" duration="37000" />
       <workItem from="1468611427881" duration="5263000" />
       <workItem from="1468885456433" duration="616000" />
-      <workItem from="1468961197688" duration="3011000" />
+      <workItem from="1468961197688" duration="3997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84968000" />
+    <option name="totallyTimeSpent" value="85954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -794,16 +795,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/app/models/roastModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="482">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/app/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="328">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding />
         </state>
       </provider>
