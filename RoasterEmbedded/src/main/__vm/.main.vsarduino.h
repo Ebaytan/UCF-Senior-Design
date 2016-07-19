@@ -56,4 +56,6 @@ extern "C" void __cxa_pure_virtual() {;}
 #include <Views.h>
 #include <WeightInterface.cpp>
 #include <WeightInterface.h>
+#include <WifiData.cpp>
+#include <WifiData.h>
 #endif

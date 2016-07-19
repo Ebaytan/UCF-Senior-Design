@@ -88,23 +88,9 @@ void HeatControl::updateHeatingElement()
 		switchState *= -1;
 	}
 	else {
-		Serial.println("Temp is not greater than 212 degrees F");
+		//Serial.println("Temp is not greater than 212 degrees F");
 	}
 
-
-	updateTemp();
-}
-//probably not needed
-void HeatControl::updateViewCheck(int state)
-{
-	//We are currenlty roasting beans
-	if (state == 1) {
-		updateTemp();
-	}
-	//idle view, first view seen when you start up roaster
-	if (state == 0) {
-
-	}
 }
 
 double HeatControl::getTemp() {

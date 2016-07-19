@@ -38,7 +38,7 @@ public:
 	* Used when the user selects a predefined
 	* roast profile
 	*/
-	void preDefinedRoastView();
+	void preDefinedRoastView(String rname, String rtype, String rbeantype, int targetTemp);
 
 	/**
 	Will update the given field with the current value
@@ -67,6 +67,7 @@ public:
 	* we would change the ViewState to Home
 	*/
 	void setView(ViewState setTo);
+	void setView(ViewState setTo, String rname, String rtype, String rbeantype, int targetTemp);
 	void updateTemp(double temp);
 	ViewState currentState;
 

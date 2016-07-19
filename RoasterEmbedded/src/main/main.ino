@@ -41,6 +41,11 @@ Mode = roasting:
 
 */
 
+#include <ArduinoJson.h>
+#include <ccspi.h>
+#include <Adafruit_CC3000_Server.h>
+#include <Adafruit_CC3000.h>
+#include "WifiData.h"
 #include "WeightInterface.h"
 #include "HeatControl.h"
 #include <Wire.h>
@@ -58,53 +63,43 @@ Mode = roasting:
 View myView = View();
 ViewState myViewState;
 HeatControl hControl;
-
+bool connected = false;
 
 void setup(void)
 {
-  
-	Serial.begin(9600); //begin serial communication
+
+	Serial.println("Roaster initializing...");
 
 	myView.initView(); //initializes the values and objects necessary for the display
-  
+	//myView.updateTemp(hControl.getTemp());  //update temp on screen
+	Serial.println("");  
 }
 
 void loop() {
-
-	if (myView.currentState == ViewState::Predefined) {
-		myView.updateTemp(hControl.getTemp());
+	WifiData client;
+	if (!connected) {
+		client = WifiData();
+		connected = true;
 	}
 	
-	
-}
+	Serial.println("Checking for new command");
 
-void setPwmFrequency(int pin, int divisor) {
-  byte mode;
-  if(pin == 5 || pin == 6 || pin == 9 || pin == 10) {
-    switch(divisor) {
-      case 1: mode = 0x01; break;
-      case 8: mode = 0x02; break;
-      case 64: mode = 0x03; break;
-      case 256: mode = 0x04; break;
-      case 1024: mode = 0x05; break;
-      default: return;
-    }
-    if(pin == 5 || pin == 6) {
-      TCCR0B = TCCR0B & 0b11111000 | mode;
-    } else {
-      TCCR1B = TCCR1B & 0b11111000 | mode;
-    }
-  } else if(pin == 3 || pin == 11) {
-    switch(divisor) {
-      case 1: mode = 0x01; break;
-      case 8: mode = 0x02; break;
-      case 32: mode = 0x03; break;
-      case 64: mode = 0x04; break;
-      case 128: mode = 0x05; break;
-      case 256: mode = 0x06; break;
-      case 1024: mode = 0x7; break;
-      default: return;
-    }
-    TCCR2B = TCCR2B & 0b11111000 | mode;
-  }
+	//set commands to pending first grab, use if / else statements
+	client.roasterStatus(); //check for new command
+	
+	Serial.print("Roast Name "); Serial.println(client.getroastName());
+	Serial.print("Roast Type "); Serial.println(client.getroastType());
+	Serial.print("Bean Type "); Serial.println(client.getbeanType());
+	
+	if (client.getroasterState() == "start-pending") {
+		Serial.println("current roast state is being set to start-pending");
+		myView.setView(ViewState::Predefined, client.getroastName(), client.getroastType(), client.getbeanType(), client.gettargetTemp());
+		client.setroasterState("start");
+	}
+	
+	if (myView.currentState == ViewState::Predefined) {
+		myView.updateTemp(hControl.getTemp());  //update temp on screen
+		hControl.updateHeatingElement();		//update heating elements if necessary
+	}
+		
 }

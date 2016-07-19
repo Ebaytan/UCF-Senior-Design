@@ -48,15 +48,32 @@ void View::setView(ViewState setTo) {
 		currentState = ViewState::Live;
 		hello.liveRoastView();
 		break;
-	case (ViewState::Predefined) :
-		currentState = ViewState::Predefined;
-		hello.preDefinedRoastView();
-		break;
 	case (ViewState::Home) :
 		currentState = ViewState::Home;
 		hello.homeRoastView();
 		break;
 		
+	}
+}
+
+void View::setView(ViewState setTo, String rname, String rtype, String rbeantype, int targetTemp) {
+	currentState = setTo;
+	View hello = View();
+
+	switch (setTo) {
+	case (ViewState::Live) :
+		currentState = ViewState::Live;
+		hello.liveRoastView();
+		break;
+	case (ViewState::Predefined) :
+		currentState = ViewState::Predefined;
+		hello.preDefinedRoastView(rname, rtype, rbeantype, targetTemp);
+		break;
+	case (ViewState::Home) :
+		currentState = ViewState::Home;
+		hello.homeRoastView();
+		break;
+
 	}
 }
 
@@ -68,7 +85,7 @@ void View::initView()
 	// origin = left,top landscape (USB left upper)
 	tft.setRotation(3);
 
-	View::setView(ViewState::Predefined);
+	View::setView(ViewState::Home);
 
 	delay(1000);  //my not need this delay
 	
@@ -147,31 +164,44 @@ void View::homeRoastView() {
 	yield();
 }
 
-void View::preDefinedRoastView() {
+void View::preDefinedRoastView(String rname, String rtype, String rbeantype, int targetTemp) {
 		tft.fillScreen(ILI9341_WHITE);
 
+		//roast name label and value
 		tft.setCursor(10, 10);
 		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
-		tft.println("Name: French Roast");
+		tft.println("Name: ");
 
-
+		tft.setCursor(150, 10);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println(rname);
+		
+		//bean type label and value
 		tft.setCursor(10, 30);
 		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
-		tft.println("Bean Type: Peruvian");
+		tft.println("Bean Type: ");
 
+		tft.setCursor(150, 30);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println(rbeantype);
+
+		//roast type label and value
 		tft.setCursor(10, 50);
 		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
-		tft.println("Roast Type: Dark");
+		tft.println("Roast Type: ");
 
-		//target temp label
+		tft.setCursor(150, 50);
+		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
+		tft.println(rtype);
+				
+		//target temp label and value
 		tft.setCursor(20, 90);
 		tft.setTextColor(ILI9341_BLACK, ILI9341_WHITE);  tft.setTextSize(2);
 		tft.println("Target Temp:");
 
-		//temperature that we are attempting to reach
 		tft.setCursor(200, 90);
 		tft.setTextColor(ILI9341_BLACK);  tft.setTextSize(2);
-		tft.println(105.5);
+		tft.println(targetTemp);
 
 		//current temp label
 		tft.setCursor(20, 110);
