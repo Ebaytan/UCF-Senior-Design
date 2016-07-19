@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11c88ef8-7908-405a-9a3e-029d9918743d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/Release/main.ino.elf" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/Release/main.ino.elf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/HeatControl.cpp" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/HeatControl.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/HeatControl.h" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/HeatControl.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/Release/board.buildinfo" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/Release/board.buildinfo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/Release/main.ino.hex" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/Release/main.ino.hex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/Views.cpp" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/Views.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/Views.h" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/Views.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/__vm/Compile.vmps.xml" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/__vm/Compile.vmps.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/main.ino" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/main.ino" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/.vs/main/v14/.suo" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/.vs/main/v14/.suo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/app/models/roastModel.js" afterPath="$PROJECT_DIR$/API/app/models/roastModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RoasterEmbedded/src/main/WifiData.cpp" afterPath="$PROJECT_DIR$/RoasterEmbedded/src/main/WifiData.cpp" />
     </list>
     <ignored path="UCF-Senior-Design.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="roastModel.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="roastModel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/app/models/roastModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+            <state relative-caret-position="462">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -70,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controlRoutes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controlRoutes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/app/routes/controlRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-324">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="39" />
+            <state relative-caret-position="-176">
+              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -106,7 +100,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/API/config/database.js" />
-        <option value="$PROJECT_DIR$/API/app/models/roastModel.js" />
         <option value="$PROJECT_DIR$/API/app/routes/roastRoutes.js" />
         <option value="$PROJECT_DIR$/API/server.js" />
         <option value="$PROJECT_DIR$/API/app/routes/users.js" />
@@ -114,6 +107,7 @@
         <option value="$PROJECT_DIR$/Web-Client/app/test.js" />
         <option value="$PROJECT_DIR$/API/app/models/user.js" />
         <option value="$PROJECT_DIR$/API/app/routes/controlRoutes.js" />
+        <option value="$PROJECT_DIR$/API/app/models/roastModel.js" />
       </list>
     </option>
   </component>
@@ -154,6 +148,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,11 +221,13 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,11 +366,12 @@
       <workItem from="1468611372533" duration="37000" />
       <workItem from="1468611427881" duration="5263000" />
       <workItem from="1468885456433" duration="616000" />
+      <workItem from="1468961197688" duration="1743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81957000" />
+    <option name="totallyTimeSpent" value="83700000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,19 +384,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16869381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30804077" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57870895" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26727065" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3510158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19864559" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2077167" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -794,18 +793,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/app/models/roastModel.js">
+    <entry file="file://$PROJECT_DIR$/API/app/routes/controlRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="-176">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/app/routes/controlRoutes.js">
+    <entry file="file://$PROJECT_DIR$/API/app/models/roastModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="39" />
+        <state relative-caret-position="462">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding />
         </state>
       </provider>

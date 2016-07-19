@@ -244,8 +244,6 @@ void WifiData::roasterStatus()
 		setroasterState("start-pending");
 		//settargetTemp(targetTemp);
 
-		
-
 		if (String(roastType) == "Light") {
 			Serial.println("Light roast starting!");
 			// POST: Roaster confirms request and fulfils pending roasting status
