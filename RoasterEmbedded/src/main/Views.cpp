@@ -17,12 +17,12 @@
 #define TS_MAXY 4000
 
 //goes here
-#define TFT_DC 46
-#define TFT_CS 5
-#define TFT_MOSI 9
-#define TFT_CLK 6
-#define TFT_RST 8
-#define TFT_MISO 7
+#define TFT_DC 46 //
+#define TFT_CS 5 //
+#define TFT_MOSI 9 //
+#define TFT_CLK 6 //
+#define TFT_RST 25 //was 8
+#define TFT_MISO 7 // 
 
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_MOSI, TFT_CLK, TFT_RST, TFT_MISO);
 
@@ -83,7 +83,7 @@ void View::initView()
 
 	tft.fillScreen(ILI9341_WHITE);
 	// origin = left,top landscape (USB left upper)
-	tft.setRotation(3);
+	tft.setRotation(1);
 
 	View::setView(ViewState::Home);
 
@@ -150,7 +150,7 @@ void View::liveRoastView()
 }
 
 void View::homeRoastView() {
-	tft.setRotation(3);
+	//tft.setRotation(3);
 	tft.fillScreen(ILI9341_BLACK);
 
 	tft.setCursor(60, 60);

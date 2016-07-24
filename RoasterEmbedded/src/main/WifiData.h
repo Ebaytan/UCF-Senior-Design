@@ -22,6 +22,7 @@ public:
 		JSON format.
 	*/
 	void roasterStatus();
+	void updateStatus(String type);
 
 	String getroastName();
 	void setroastName(String roastName);

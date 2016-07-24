@@ -52,7 +52,6 @@ Mode = roasting:
 #include <SPI.h>
 #include <max6675.h>
 #include <registers.h>
-//#include <pin_magic.h>
 #include <Adafruit_TFTLCD.h>
 #include <Adafruit_STMPE610.h>
 #include <Adafruit_ILI9341.h>
@@ -61,9 +60,11 @@ Mode = roasting:
 #include "Views.h"
 
 View myView = View();
-ViewState myViewState;
-HeatControl hControl;
+ViewState myViewState = ViewState();
+HeatControl hControl = HeatControl();
 bool connected = false;
+
+int psuedoRTC = 0;
 
 void setup(void)
 {
@@ -71,21 +72,31 @@ void setup(void)
 	Serial.println("Roaster initializing...");
 
 	myView.initView(); //initializes the values and objects necessary for the display
+
+	pinMode(30, OUTPUT);
+	digitalWrite(30, LOW);
+
 	//myView.updateTemp(hControl.getTemp());  //update temp on screen
 	Serial.println("");  
 }
 
 void loop() {
+
 	WifiData client;
 	if (!connected) {
+		Serial.println("Connected set to false!");
 		client = WifiData();
 		connected = true;
 	}
 	
-	Serial.println("Checking for new command");
-
 	//set commands to pending first grab, use if / else statements
-	client.roasterStatus(); //check for new command
+	//if (psuedoRTC / 10 == 1) {
+
+	if (hControl.getCheckWifiOk()) {
+		Serial.println("Checking for new command");
+		client.roasterStatus(); //check for new command
+		hControl.setCheckWifiOk(false);
+	}
 	
 	Serial.print("Roast Name "); Serial.println(client.getroastName());
 	Serial.print("Roast Type "); Serial.println(client.getroastType());
@@ -96,10 +107,14 @@ void loop() {
 		myView.setView(ViewState::Predefined, client.getroastName(), client.getroastType(), client.getbeanType(), client.gettargetTemp());
 		client.setroasterState("start");
 	}
+	//add live pending and stop pending
 	
 	if (myView.currentState == ViewState::Predefined) {
 		myView.updateTemp(hControl.getTemp());  //update temp on screen
 		hControl.updateHeatingElement();		//update heating elements if necessary
 	}
+
+	//psuedoRTC++;
 		
 }
+

@@ -229,13 +229,11 @@ function getRoastData(roastName) {
         host: 'ec2-54-174-178-132.compute-1.amazonaws.com',
         path: '/',
         agent: false
-    }, function(response) {
+    }, function (response) {
         return response;
     });
 
 }
-
-
 
 
 module.exports = router;

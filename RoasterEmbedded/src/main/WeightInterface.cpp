@@ -52,7 +52,6 @@ float Weight::getTotalWeight()
 	//tempVoltage /= 1000; //convert into mV
 	//tempWeight += (tempVoltage - 14.93) / .57;
 
-
 	return tempWeight;
 
 }

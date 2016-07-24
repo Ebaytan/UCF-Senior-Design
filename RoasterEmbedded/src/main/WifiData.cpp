@@ -12,15 +12,15 @@
 
 // Interrupt & Control Pins
 #define ADAFRUIT_CC3000_IRQ   3  // MUST be an interrupt pin!
-#define ADAFRUIT_CC3000_VBAT  36 // WEN
+#define ADAFRUIT_CC3000_VBAT  8 // WEN
 #define ADAFRUIT_CC3000_CS    10
 
 Adafruit_CC3000 cc3000 = Adafruit_CC3000(ADAFRUIT_CC3000_CS, ADAFRUIT_CC3000_IRQ, ADAFRUIT_CC3000_VBAT,
 	SPI_CLOCK_DIVIDER); // you can change this clock speed
 
 						// WiFi SSID & Password
-#define WLAN_SSID       "FBI Hotspot" // cannot be longer than 32 characters!
-#define WLAN_PASS       "romanfam"
+#define WLAN_SSID       "Ebaytan" // cannot be longer than 32 characters!
+#define WLAN_PASS       "ebaytan0818"
 
 						// Security can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
 #define WLAN_SECURITY   WLAN_SEC_WPA2
@@ -159,8 +159,8 @@ void WifiData::setroasterState(String state)
 
 void WifiData::roasterStatus()
 {
-
 	ip = 0;
+
 	// Try looking up the website's IP address
 	Serial.print(WEBSITE); Serial.print(F(" -> "));
 	while (ip == 0) {
@@ -172,6 +172,7 @@ void WifiData::roasterStatus()
 
 	// Setup client for CC3000
 	Adafruit_CC3000_Client roasterStatusClient = cc3000.connectTCP(ip, 80);
+	delay(300);
 
 	char c; // Variable when reading in data from request
 	String result = ""; // Empty string that is created for request
@@ -373,13 +374,123 @@ void WifiData::roasterStatus()
 		}
 
 	}
-	else
-
+	else {
 		Serial.println("No new command received");
+	}
 
-	roasterStatusClient.close(); // Close client
+	roasterStatusClient.stop();
+	delay(100);
+	roasterStatusClient.close();
+	delay(200);
 
 	Serial.println("\n================================================================");
 
+	//if we have a new command we must update api, in order for the api to know that the command has been acknowledged
+	if (String(roastingStatus) == "start-pending" || String(roastingStatus) == "pause-pending" || String(roastingStatus) == "stop-pending") {
+		updateStatus(roastType);  //update api with latest roaster status
+	}
+		
+}
 
+void WifiData::updateStatus(String type)
+{
+
+	Serial.println("Updating API with latest roaster state.");
+
+	ip = 0;
+	// Try looking up the website's IP address
+	Serial.print(WEBSITE); Serial.print(F(" -> "));
+	while (ip == 0) {
+		if (!cc3000.getHostByName(WEBSITE, &ip)) {
+			Serial.println(F("Couldn't resolve!"));
+		}
+		delay(500);
+	}
+
+	// Setup client for CC3000
+	Adafruit_CC3000_Client roasterStatusClient = cc3000.connectTCP(ip, 80);
+	delay(300);
+
+	char c; // Variable when reading in data from request
+	String result = ""; // Empty string that is created for request
+
+						// Declare buffer for JSON data that is read from request
+						//StaticJsonBuffer<400> jsonBuffer;
+
+	if (roastType == "Light") {
+		// POST: Roaster status. Requires JWT in the Authorization Header
+		Serial.println("Light Roast Request");
+		if (roasterStatusClient.connected()) {
+			roasterStatusClient.fastrprint(F("POST "));
+			roasterStatusClient.fastrprint(lightRoastStartURI);
+			roasterStatusClient.fastrprint(F(" HTTP/1.1\r\n"));
+			roasterStatusClient.fastrprint(F("Host: ")); roasterStatusClient.fastrprint(WEBSITE); roasterStatusClient.fastrprint(F("\r\n"));
+			roasterStatusClient.fastrprint(F("Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NzhlYTQ2NDI3NGZlMDA4MjUyYTY3YmIiLCJ1c2VybmFtZSI6IkViYXl0YW4iLCJwYXNzd29yZCI6IiQyYSQxMCRNckZEV2dtZHFCU0Q5UG8uWXZHNzYuVFBZS0h4Y3pienFmRnRqRTFtZ01DYzRjZUYySnFFaSIsImVtYWlsIjoiaWV2YW5iYXl0YW5AZ21haWwuY29tIiwiX192IjowLCJyb2FzdGluZ3Byb2ZpbGVzIjpbXSwicm9hc3RlciI6eyJyb2FzdGVyVUlEIjoiMTIzNCJ9LCJyYXRpbmciOnsiYXZnUmF0aW5nIjowLCJ0b3RhbEFjY1JhdGluZyI6MCwibnVtYmVyb2ZSYXRpbmdzIjowfX0.XHlai4Bn4eqNTIzeBtT24iGRe3xph92g6YBS4GMVGSw"));
+			roasterStatusClient.fastrprint(F("\r\n"));
+			roasterStatusClient.println();
+		}
+		else {
+			Serial.println(F("Connection failed"));
+			return;
+		}
+	}
+	else if (roastType == "Medium") {
+
+		// POST: Roaster status. Requires JWT in the Authorization Header
+		Serial.println("Medium Roast Request");
+		if (roasterStatusClient.connected()) {
+			roasterStatusClient.fastrprint(F("POST "));
+			roasterStatusClient.fastrprint(mediumRoastStartURI);
+			roasterStatusClient.fastrprint(F(" HTTP/1.1\r\n"));
+			roasterStatusClient.fastrprint(F("Host: ")); roasterStatusClient.fastrprint(WEBSITE); roasterStatusClient.fastrprint(F("\r\n"));
+			roasterStatusClient.fastrprint(F("Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NzhlYTQ2NDI3NGZlMDA4MjUyYTY3YmIiLCJ1c2VybmFtZSI6IkViYXl0YW4iLCJwYXNzd29yZCI6IiQyYSQxMCRNckZEV2dtZHFCU0Q5UG8uWXZHNzYuVFBZS0h4Y3pienFmRnRqRTFtZ01DYzRjZUYySnFFaSIsImVtYWlsIjoiaWV2YW5iYXl0YW5AZ21haWwuY29tIiwiX192IjowLCJyb2FzdGluZ3Byb2ZpbGVzIjpbXSwicm9hc3RlciI6eyJyb2FzdGVyVUlEIjoiMTIzNCJ9LCJyYXRpbmciOnsiYXZnUmF0aW5nIjowLCJ0b3RhbEFjY1JhdGluZyI6MCwibnVtYmVyb2ZSYXRpbmdzIjowfX0.XHlai4Bn4eqNTIzeBtT24iGRe3xph92g6YBS4GMVGSw"));
+			roasterStatusClient.fastrprint(F("\r\n"));
+			roasterStatusClient.println();
+		}
+		else {
+			Serial.println(F("Connection failed"));
+			return;
+		}
+
+	}
+	else if (roastType == "Dark") {
+
+		// POST: Roaster status. Requires JWT in the Authorization Header
+		Serial.println("Dark Roast Request");
+		if (roasterStatusClient.connected()) {
+			roasterStatusClient.fastrprint(F("POST "));
+			roasterStatusClient.fastrprint(darkRoastStartURI);
+			roasterStatusClient.fastrprint(F(" HTTP/1.1\r\n"));
+			roasterStatusClient.fastrprint(F("Host: ")); roasterStatusClient.fastrprint(WEBSITE); roasterStatusClient.fastrprint(F("\r\n"));
+			roasterStatusClient.fastrprint(F("Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NzhlYTQ2NDI3NGZlMDA4MjUyYTY3YmIiLCJ1c2VybmFtZSI6IkViYXl0YW4iLCJwYXNzd29yZCI6IiQyYSQxMCRNckZEV2dtZHFCU0Q5UG8uWXZHNzYuVFBZS0h4Y3pienFmRnRqRTFtZ01DYzRjZUYySnFFaSIsImVtYWlsIjoiaWV2YW5iYXl0YW5AZ21haWwuY29tIiwiX192IjowLCJyb2FzdGluZ3Byb2ZpbGVzIjpbXSwicm9hc3RlciI6eyJyb2FzdGVyVUlEIjoiMTIzNCJ9LCJyYXRpbmciOnsiYXZnUmF0aW5nIjowLCJ0b3RhbEFjY1JhdGluZyI6MCwibnVtYmVyb2ZSYXRpbmdzIjowfX0.XHlai4Bn4eqNTIzeBtT24iGRe3xph92g6YBS4GMVGSw"));
+			roasterStatusClient.fastrprint(F("\r\n"));
+			roasterStatusClient.println();
+		}
+		else {
+			Serial.println(F("Connection failed"));
+			return;
+		}
+	}
+	// Read data until either the connection is closed, or the idle timeout is reached
+	unsigned long lastRead = millis();
+	while (roasterStatusClient.connected() && (millis() - lastRead < IDLE_TIMEOUT_MS)) {
+		while (roasterStatusClient.available()) {
+			c = roasterStatusClient.read();
+			result = result + c;
+			if (result.endsWith("Connection: keep-alive")) { // Skip Headers of request
+				result = "";
+			}
+			lastRead = millis();
+		}
+	}
+
+	Serial.print(result); // Print JSON data from request
+	delay(1000);
+
+	roasterStatusClient.stop();
+	delay(100);
+	roasterStatusClient.close();
+	delay(200);
+
+	//roasterStatusClient.close(); // Close client
 }

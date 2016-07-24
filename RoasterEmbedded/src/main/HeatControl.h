@@ -46,7 +46,13 @@ public:
 	*/
 	void updateViewCheck(int state);
 
+	void setCheckWifiOk(bool state);
+
+	bool getCheckWifiOk();
+
+
 private:
 	bool coolMode;
+	bool checkWifiOk;
 	
 };
