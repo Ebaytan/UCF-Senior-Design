@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <legend>Divide and Conquer</legend>
+        </div>
+        <div class="col-md-8 col-sm-8" id="divide-conquer">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <legend>Final Document - SD 1</legend>
+        </div>
+        <div class="col-md-8 col-sm-8" id="final-doc-1">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <legend>CDR</legend>
+        </div>
+        <div class="col-md-8 col-sm-8" id="cdr">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <legend>Conference Paper</legend>
+        </div>
+        <div class="col-md-8 col-sm-8" id="conference-paper">
+        </div>
+    </div>
+
+    <br><br>
+
+</div>
+
+<script>
+    PDFObject.embed("./public/Files/Documents/ConferencePaper.pdf", "#conference-paper");
+    PDFObject.embed("./public/Files/Documents/Divide&Conquer.pdf", "#divide-conquer");
+    PDFObject.embed("./public/Files/Documents/RoastRightSeniorDesign1.pdf", "#final-doc-1");
+    PDFObject.embed("./public/Files/Documents/CDRPresentation.pdf", "#cdr");
+
+</script>
+
+<style>
+    .pdfobject-container {
+        height: 500px;
+    }
+
+    .pdfobject {
+        border: 1px solid #666;
+    }
+</style>

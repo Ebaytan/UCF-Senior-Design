@@ -1,7 +1,7 @@
 /*
   Main entry file for RoastRight embedded system
 
-Flow:  
+Flow:
 Mode = idle: (Default when system turns on)
 	1) Setup pins as input and output
 	Loop:
@@ -77,7 +77,7 @@ void setup(void)
 	digitalWrite(30, LOW);
 
 	//myView.updateTemp(hControl.getTemp());  //update temp on screen
-	Serial.println("");  
+	Serial.println("");
 }
 
 void loop() {
@@ -88,7 +88,7 @@ void loop() {
 		client = WifiData();
 		connected = true;
 	}
-	
+
 	//set commands to pending first grab, use if / else statements
 	//if (psuedoRTC / 10 == 1) {
 
@@ -97,24 +97,24 @@ void loop() {
 		client.roasterStatus(); //check for new command
 		hControl.setCheckWifiOk(false);
 	}
-	
+
 	Serial.print("Roast Name "); Serial.println(client.getroastName());
 	Serial.print("Roast Type "); Serial.println(client.getroastType());
 	Serial.print("Bean Type "); Serial.println(client.getbeanType());
-	
+
 	if (client.getroasterState() == "start-pending") {
 		Serial.println("current roast state is being set to start-pending");
 		myView.setView(ViewState::Predefined, client.getroastName(), client.getroastType(), client.getbeanType(), client.gettargetTemp());
 		client.setroasterState("start");
 	}
 	//add live pending and stop pending
-	
+
 	if (myView.currentState == ViewState::Predefined) {
 		myView.updateTemp(hControl.getTemp());  //update temp on screen
 		hControl.updateHeatingElement();		//update heating elements if necessary
 	}
 
 	//psuedoRTC++;
-		
+
 }
 

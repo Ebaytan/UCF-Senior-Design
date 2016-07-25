@@ -9,6 +9,16 @@
 #include <SPI.h>
 #include <string.h>
 #include "utility/debug.h"
+#include <string> 
+
+/*
+Note: 
+	Brown is iscp 1
+
+	Pins:
+	D10 - D13, ICSP, D3, D8, D10
+
+*/
 
 // Interrupt & Control Pins
 #define ADAFRUIT_CC3000_IRQ   3  // MUST be an interrupt pin!
@@ -97,7 +107,7 @@ WifiData::WifiData()
 	this->beanType = "";
 	this->roastName = "";
 	this->roastType = "";
-	this->targetTemp = 350;
+	this->targetTemp = 268;
 	this->roasterState = "";
 
 }
@@ -227,7 +237,9 @@ void WifiData::roasterStatus()
 	String roastType = root["roastData"]["roastType"];
 	String roastName = root["roastData"]["name"];
 	String beanType = root["roastData"]["beanType"];
-	//int targetTemp = root["roastData"]["RoastingData"];
+	String targetTempStr = root["roastData"]["RoastingData"];
+
+	int targetTemp = std::stoi(targetTempStr, nullptr, 0);
 
 	// Print values
 	Serial.println(testSuccess);    // success: true or false
@@ -243,7 +255,7 @@ void WifiData::roasterStatus()
 		setbeanType(beanType);
 		setroastType(roastType);
 		setroasterState("start-pending");
-		//settargetTemp(targetTemp);
+		settargetTemp(targetTemp);
 
 		if (String(roastType) == "Light") {
 			Serial.println("Light roast starting!");
@@ -292,7 +304,7 @@ void WifiData::roasterStatus()
 		setroastName(roastName);
 		setbeanType(beanType);
 		setroastType(roastType);
-		//settargetTemp(targetTemp);
+		settargetTemp(targetTemp);
 
 		if (String(roastType) == "Light") {
 			// POST: Roaster confirms request and fulfils pending roasting status
@@ -338,7 +350,7 @@ void WifiData::roasterStatus()
 		setroastName(roastName);
 		setbeanType(beanType);
 		setroastType(roastType);
-		//settargetTemp(targetTemp);
+		settargetTemp(targetTemp);
 
 		if (String(roastType) == "Light") {
 			// POST: Roaster confirms request and fulfils pending roasting status
